@@ -5,20 +5,20 @@
 ## 安装与配置
 
 ```bash
-pip install -r entity_mcp/requirements.txt
+pip install -r requirements.txt
 ```
 
-在 `entity_mcp/.env` 配置网关和 Milvus 所需凭据。该文件包含密钥，不应提交到 Git。
+在 `.env` 配置网关和 Milvus 所需凭据。该文件包含密钥，不应提交到 Git。
 
 ## 启动
 
 ```bash
-python -m entity_mcp.servers.company_server
-python -m entity_mcp.servers.group_server
-python -m entity_mcp.servers.industry_server
-python -m entity_mcp.servers.park_server
-python -m entity_mcp.servers.person_server
-python -m entity_mcp.servers.region_server
+python servers/company_server.py
+python servers/group_server.py
+python servers/industry_server.py
+python servers/park_server.py
+python servers/person_server.py
+python servers/region_server.py
 ```
 
 | 服务 | 地址 |

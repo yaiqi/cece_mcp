@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import AsyncMock, patch
 
-from entity_mcp.common.business_protocol import (
+from common.business_protocol import (
     多候选,
     唯一匹配,
     实体未匹配,
@@ -9,8 +9,8 @@ from entity_mcp.common.business_protocol import (
     查询无数据,
     调用失败,
 )
-from entity_mcp.common import milvus_client
-from entity_mcp.entities import park
+from common import milvus_client
+from entities import park
 
 
 class BusinessProtocolTests(unittest.IsolatedAsyncioTestCase):

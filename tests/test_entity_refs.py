@@ -1,8 +1,8 @@
 import unittest
 import inspect
 
-from entity_mcp.entities import group, park, region
-from entity_mcp.models.entity_refs import GroupRef, ParkRef, RegionRef
+from entities import group, park, region
+from models.entity_refs import GroupRef, ParkRef, RegionRef
 
 
 class EntityReferenceModelTests(unittest.TestCase):

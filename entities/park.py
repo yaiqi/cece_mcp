@@ -10,10 +10,10 @@ statisticpark）还没实现，需要先给 get_address 加一个返回完整省
 breadcrumb 的能力，见 TODO。
 """
 
-from entity_mcp.common.api_client import api_post, unwrap
-from entity_mcp.common.milvus_client import resolve_entity
-from entity_mcp.common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
-from entity_mcp.models.entity_refs import ParkRef
+from common.api_client import api_post, unwrap
+from common.milvus_client import resolve_entity
+from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from models.entity_refs import ParkRef
 
 
 async def _resolve_park(name_or_id: str) -> tuple[dict | None, dict | None]:

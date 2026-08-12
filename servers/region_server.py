@@ -1,7 +1,13 @@
 """区域实体 MCP 服务入口。"""
 
-from entity_mcp.common.server_factory import SERVICE_CONFIGS, create_mcp
-from entity_mcp.entities import region
+if __name__ == "__main__" and __package__ is None:
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from common.server_factory import SERVICE_CONFIGS, create_mcp
+from entities import region
 
 SERVICE_KEY = "region"
 ROUTE = SERVICE_CONFIGS[SERVICE_KEY].streamable_http_path

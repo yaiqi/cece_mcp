@@ -81,10 +81,10 @@ person.py 那种 companyAmount 断层置信度信号可用，selectorSearch 压�
 
 from datetime import datetime
 
-from entity_mcp.common.address import get_address
-from entity_mcp.common.api_client import api_get, api_post, unwrap
-from entity_mcp.common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
-from entity_mcp.models.entity_refs import IndustryRef, RegionRef
+from common.address import get_address
+from common.api_client import api_get, api_post, unwrap
+from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from models.entity_refs import IndustryRef, RegionRef
 
 _INDUSTRY_TYPES = ("SELECTED", "CSF", "NSEI", "GB", "DE")
 

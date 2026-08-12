@@ -1,6 +1,6 @@
 import unittest
 
-from entity_mcp.common.server_factory import SERVICE_CONFIGS, create_mcp
+from common.server_factory import SERVICE_CONFIGS, create_mcp
 
 
 class ServerFactoryTests(unittest.TestCase):

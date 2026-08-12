@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import AsyncMock, patch
 
-from entity_mcp.entities import park, region
+from entities import park, region
 
 
 PARK_REF = {

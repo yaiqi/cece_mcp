@@ -142,8 +142,8 @@ monitorInfo/favoriteInfo 嵌套对象），明显是两套不同的搜索底层
 
 from functools import wraps
 
-from entity_mcp.common.api_client import api_get, api_post, unwrap
-from entity_mcp.common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.api_client import api_get, api_post, unwrap
+from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
 
 
 def _企业查询工具(tool):

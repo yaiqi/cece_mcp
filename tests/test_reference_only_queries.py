@@ -1,7 +1,7 @@
 import inspect
 import unittest
 
-from entity_mcp.entities import group, industry, park, person, region
+from entities import group, industry, park, person, region
 
 
 class ReferenceOnlyQueryTests(unittest.TestCase):

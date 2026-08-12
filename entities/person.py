@@ -9,9 +9,9 @@
 做置信度判断，不是瞎猜。
 """
 
-from entity_mcp.common.api_client import api_post, unwrap
-from entity_mcp.common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
-from entity_mcp.models.entity_refs import PersonRef
+from common.api_client import api_post, unwrap
+from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from models.entity_refs import PersonRef
 
 _CONFIDENCE_RATIO = 5  # 第一名 companyAmount 至少是第二名的这个倍数，才自动采用
 

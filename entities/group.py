@@ -9,10 +9,10 @@ material/集团/融资图谱精简.py、资质图谱精简.py 保持一致（这
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from entity_mcp.common.api_client import api_get, api_post, unwrap
-from entity_mcp.common.milvus_client import resolve_single
-from entity_mcp.common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
-from entity_mcp.models.entity_refs import GroupRef
+from common.api_client import api_get, api_post, unwrap
+from common.milvus_client import resolve_single
+from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from models.entity_refs import GroupRef
 
 # 硬编码别名：跟 material/集团/获取集团全称-生产.yml 里的 ALIAS_MAP 保持一致，
 # 这条是当时手工加的例外，Milvus 检索覆盖不到就先留着。

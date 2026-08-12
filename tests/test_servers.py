@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from entity_mcp.servers import (
+from servers import (
     company_server,
     group_server,
     industry_server,
