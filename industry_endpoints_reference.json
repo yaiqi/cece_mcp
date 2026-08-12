@@ -1,0 +1,2803 @@
+{
+  "/idis_industry/teis/industryZs/detail/industryCreative/patent/find": {
+    "url": "/idis_industry/teis/industryZs/detail/industryCreative/patent/find",
+    "name": "专利列表",
+    "method": "POST",
+    "request_params": [],
+    "request_body": {
+      "required": false,
+      "content_type": "application/json",
+      "params": [
+        {
+          "name": "industryType",
+          "type": "string",
+          "required": false,
+          "description": "产业类型（默认：SELECTED)",
+          "example": "SELECTED"
+        },
+        {
+          "name": "regionCode",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": ""
+        },
+        {
+          "name": "industryCode",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "csf_20150763"
+        },
+        {
+          "name": "pageNow",
+          "type": "integer",
+          "required": false,
+          "description": "",
+          "example": "1"
+        },
+        {
+          "name": "pageSize",
+          "type": "integer",
+          "required": false,
+          "description": "",
+          "example": "10"
+        },
+        {
+          "name": "keyword",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": ""
+        },
+        {
+          "name": "orderColumn",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "applicationDate"
+        },
+        {
+          "name": "orderType",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "desc"
+        }
+      ]
+    },
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "专利总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "部分专利信息"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "申请人"
+      },
+      {
+        "name": "name",
+        "chinese_name": "专利名称"
+      },
+      {
+        "name": "applicationDate",
+        "chinese_name": "申请日期"
+      },
+      {
+        "name": "publicationDate",
+        "chinese_name": "公告日期"
+      },
+      {
+        "name": "expirationDate",
+        "chinese_name": "失效日期"
+      },
+      {
+        "name": "valueScore",
+        "chinese_name": "评分：专利价值度"
+      },
+      {
+        "name": "stabilityScore",
+        "chinese_name": "评分：技术稳定度"
+      },
+      {
+        "name": "advancedScore",
+        "chinese_name": "评分：技术先进性"
+      },
+      {
+        "name": "protectionScore",
+        "chinese_name": "评分：保护范围"
+      },
+      {
+        "name": "inventor",
+        "chinese_name": "发明人"
+      },
+      {
+        "name": "publicationNumber",
+        "chinese_name": "公开号"
+      },
+      {
+        "name": "applicant",
+        "chinese_name": "申请人"
+      },
+      {
+        "name": "tagList",
+        "chinese_name": "专利标签"
+      },
+      {
+        "name": "type",
+        "chinese_name": "专利类型"
+      },
+      {
+        "name": "legalStatus",
+        "chinese_name": "法律状态"
+      },
+      {
+        "name": "applicationNumber",
+        "chinese_name": "申请编号"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/industryCreative/patent/find",
+      "method": "POST",
+      "params": {
+        "industryType": "SELECTED",
+        "industryCode": "csf_20150763",
+        "pageNow": "1",
+        "pageSize": "10",
+        "orderColumn": "applicationDate",
+        "orderType": "desc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/researchReport/findPage": {
+    "url": "/idis_industry/teis/industryZs/detail/researchReport/findPage",
+    "name": "研报列表",
+    "method": "POST",
+    "request_params": [],
+    "request_body": {
+      "required": false,
+      "content_type": "application/json",
+      "params": [
+        {
+          "name": "industryType",
+          "type": "string",
+          "required": false,
+          "description": "产业类型（默认：SELECTED)",
+          "example": "SELECTED"
+        },
+        {
+          "name": "regionCode",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": ""
+        },
+        {
+          "name": "industryCode",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "csf_20150763"
+        },
+        {
+          "name": "pageNow",
+          "type": "integer",
+          "required": false,
+          "description": "",
+          "example": "1"
+        },
+        {
+          "name": "pageSize",
+          "type": "integer",
+          "required": false,
+          "description": "",
+          "example": "10"
+        },
+        {
+          "name": "keyword",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": ""
+        },
+        {
+          "name": "orderColumn",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "registerDate"
+        },
+        {
+          "name": "orderType",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "example": "desc"
+        }
+      ]
+    },
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "研报总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "部分研报信息"
+      },
+      {
+        "name": "title",
+        "chinese_name": "标题"
+      },
+      {
+        "name": "summary",
+        "chinese_name": "摘要"
+      },
+      {
+        "name": "orgName",
+        "chinese_name": "研究机构"
+      },
+      {
+        "name": "analystList",
+        "chinese_name": "分析师列表"
+      },
+      {
+        "name": "analystName",
+        "chinese_name": "分析师名"
+      },
+      {
+        "name": "pdfUrl",
+        "chinese_name": "研报链接"
+      },
+      {
+        "name": "pageCount",
+        "chinese_name": "页数"
+      },
+      {
+        "name": "publishDate",
+        "chinese_name": "发布日期"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/researchReport/findPage",
+      "method": "POST",
+      "params": {
+        "industryType": "SELECTED",
+        "industryCode": "csf_20150763",
+        "pageNow": "1",
+        "pageSize": "10",
+        "orderColumn": "registerDate",
+        "orderType": "desc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/unifyIndustry/selectorSearch": {
+    "url": "/idis_industry/teis/industryZs/unifyIndustry/selectorSearch",
+    "name": "产业搜索",
+    "method": "POST",
+    "request_params": null,
+    "request_body": null,
+    "output_params": [],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/unifyIndustry/selectorSearch",
+      "method": "POST",
+      "params": {}
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend",
+    "name": "产业财务趋势-成长能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "tabName",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "营业总收入"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "数据总量"
+      },
+      {
+        "name": "list",
+        "chinese_name": "部分数据信息"
+      },
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "quarter",
+        "chinese_name": "季度"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "营业总收入信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "总资产信息"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "每股收益信息"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "tabName": "营业总收入"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTrend",
+    "name": "产业财务趋势-盈利能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "tabName",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "利润率"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "数据总量"
+      },
+      {
+        "name": "list",
+        "chinese_name": "部分数据信息"
+      },
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "quarter",
+        "chinese_name": "季度"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "利润率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "ROE/ROA信息"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "tabName": "利润率"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend",
+    "name": "产业财务趋势-运营能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "tabName",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "营业周期"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "数据总量"
+      },
+      {
+        "name": "list",
+        "chinese_name": "部分数据信息"
+      },
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "quarter",
+        "chinese_name": "季度"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "营业周期信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "资产周转率信息"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "存货周转率信息"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "tabName": "营业周期"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend",
+    "name": "产业财务趋势-偿债能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "tabName",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "资产负债率"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "quarter",
+        "chinese_name": "季度"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "资产负债率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "流动比率信息"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "速动比率信息"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "tabName": "资产负债率"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyOperationTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyOperationTrend",
+    "name": "产业财务趋势-全部企业-营收水平指数",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "流动比率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyOperationTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyAssetTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyAssetTrend",
+    "name": "产业财务趋势-全部企业-资产规模指数",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "流动比率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyAssetTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyProfitTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyProfitTrend",
+    "name": "产业财务趋势-全部企业-销售利润水平",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "流动比率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyProfitTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyEquityTrend": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyEquityTrend",
+    "name": "产业财务趋势-全部企业-所有者权益水平指数",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "timeItemList",
+        "chinese_name": "时间条目"
+      },
+      {
+        "name": "year",
+        "chinese_name": "年份"
+      },
+      {
+        "name": "indicatorItemList",
+        "chinese_name": "流动比率信息"
+      },
+      {
+        "name": "indicator",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "value",
+        "chinese_name": "指标值"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyEquityTrend",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbility": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbility",
+    "name": "企业财务明细-成长能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      },
+      {
+        "name": "pageNow",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 1
+      },
+      {
+        "name": "pageSize",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 20
+      },
+      {
+        "name": "orderColumn",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "operatingRevenue"
+      },
+      {
+        "name": "orderType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "desc"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "查询企业总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "数据"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "operatingRevenue",
+        "chinese_name": "营业收入（亿元）"
+      },
+      {
+        "name": "operatingRevenueYOY",
+        "chinese_name": "营业收入同步（%）"
+      },
+      {
+        "name": "totalAssets",
+        "chinese_name": "总资产（亿元）"
+      },
+      {
+        "name": "totalAssetGrowRate",
+        "chinese_name": "总资产同比（%）"
+      },
+      {
+        "name": "operatingProfit",
+        "chinese_name": "利润总额（亿元）"
+      },
+      {
+        "name": "operProfitGrowRate",
+        "chinese_name": "利润总额同比（%）"
+      },
+      {
+        "name": "eps",
+        "chinese_name": "每股收益-基本（元）"
+      },
+      {
+        "name": "epsYOY",
+        "chinese_name": "每股收益-基本同比（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbility",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1",
+        "pageNow": 1,
+        "pageSize": 20,
+        "orderColumn": "operatingRevenue",
+        "orderType": "desc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbility": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbility",
+    "name": "企业财务明细-盈利能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      },
+      {
+        "name": "pageNow",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 1
+      },
+      {
+        "name": "pageSize",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 20
+      },
+      {
+        "name": "orderColumn",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "grossIncomeRatio"
+      },
+      {
+        "name": "orderType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "asc"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "查询企业总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "数据"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "grossIncomeRatio",
+        "chinese_name": "毛利率（%）"
+      },
+      {
+        "name": "netProfitRatio",
+        "chinese_name": "净利率（%）"
+      },
+      {
+        "name": "roeWeighted",
+        "chinese_name": "净资产收益率-加权（%）"
+      },
+      {
+        "name": "roe",
+        "chinese_name": "净资产收益率-摊薄（%）"
+      },
+      {
+        "name": "roaEBIT",
+        "chinese_name": "总资产报酬率（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbility",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1",
+        "pageNow": 1,
+        "pageSize": 20,
+        "orderColumn": "grossIncomeRatio",
+        "orderType": "asc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbility": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbility",
+    "name": "企业财务明细-运营能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      },
+      {
+        "name": "pageNow",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 1
+      },
+      {
+        "name": "pageSize",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 20
+      },
+      {
+        "name": "orderColumn",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "operCycle"
+      },
+      {
+        "name": "orderType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "desc"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "查询企业总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "数据"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "operCycle",
+        "chinese_name": "营业周期（天/次）"
+      },
+      {
+        "name": "totalAssetTRate",
+        "chinese_name": "总资产周转率（次）"
+      },
+      {
+        "name": "inventoryTRate",
+        "chinese_name": "存货周转率（次）"
+      },
+      {
+        "name": "artRate",
+        "chinese_name": "应收账款周转率（次）"
+      },
+      {
+        "name": "fixedAssetTRate",
+        "chinese_name": "固定资产周转率（次）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbility",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1",
+        "pageNow": 1,
+        "pageSize": 20,
+        "orderColumn": "operCycle",
+        "orderType": "desc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbility": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbility",
+    "name": "企业财务明细-偿债能力",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      },
+      {
+        "name": "pageNow",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 1
+      },
+      {
+        "name": "pageSize",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 20
+      },
+      {
+        "name": "orderColumn",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "debtAssetsRatio"
+      },
+      {
+        "name": "orderType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "asc"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "查询企业总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "数据"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "debtAssetsRatio",
+        "chinese_name": "资产负债率（%）"
+      },
+      {
+        "name": "currentLiabilityToTL",
+        "chinese_name": "流动负债/负债合计（%）"
+      },
+      {
+        "name": "debtEquityRatio",
+        "chinese_name": "产权比率（%）"
+      },
+      {
+        "name": "currentRatio",
+        "chinese_name": "流动比率（%）"
+      },
+      {
+        "name": "quickRatio",
+        "chinese_name": "速动比率（%）"
+      },
+      {
+        "name": "cashRatio",
+        "chinese_name": "现金比率（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbility",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1",
+        "pageNow": 1,
+        "pageSize": 20,
+        "orderColumn": "debtAssetsRatio",
+        "orderType": "asc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlow": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlow",
+    "name": "企业财务明细-现金流量",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      },
+      {
+        "name": "pageNow",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 1
+      },
+      {
+        "name": "pageSize",
+        "type": "integer",
+        "required": false,
+        "description": "",
+        "example": 20
+      },
+      {
+        "name": "orderColumn",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "cashRateOfSales"
+      },
+      {
+        "name": "orderType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "desc"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "totalCount",
+        "chinese_name": "查询企业总数"
+      },
+      {
+        "name": "list",
+        "chinese_name": "数据"
+      },
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "cashRateOfSales",
+        "chinese_name": "销售现金比率（%）"
+      },
+      {
+        "name": "saleServiceCashToOR",
+        "chinese_name": "销售商品提供劳务收到的现金/营业收入（%）"
+      },
+      {
+        "name": "netOperCFToOperProfTTM",
+        "chinese_name": "经营活动产生的现金流量/营业利润（%）"
+      },
+      {
+        "name": "netOperateCashFlowYOY",
+        "chinese_name": "经营活动产生的现金流量净额同比增长（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlow",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1",
+        "pageNow": 1,
+        "pageSize": 20,
+        "orderColumn": "cashRateOfSales",
+        "orderType": "desc"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTop": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTop",
+    "name": "企业排行-营业总收入",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q1"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "operatingRevenue",
+        "chinese_name": "营业收入（亿元）"
+      },
+      {
+        "name": "operatingRevenueYOY",
+        "chinese_name": "营业收入同步（%）"
+      },
+      {
+        "name": "totalAssets",
+        "chinese_name": "总资产（亿元）"
+      },
+      {
+        "name": "totalAssetGrowRate",
+        "chinese_name": "总资产同比（%）"
+      },
+      {
+        "name": "operatingProfit",
+        "chinese_name": "利润总额（亿元）"
+      },
+      {
+        "name": "operProfitGrowRate",
+        "chinese_name": "利润总额同比（%）"
+      },
+      {
+        "name": "eps",
+        "chinese_name": "每股收益-基本（元）"
+      },
+      {
+        "name": "epsYOY",
+        "chinese_name": "每股收益-基本同比（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTop",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q1"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTop": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTop",
+    "name": "企业排行-毛利率",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q2"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "grossIncomeRatio",
+        "chinese_name": "毛利率（%）"
+      },
+      {
+        "name": "netProfitRatio",
+        "chinese_name": "净利率（%）"
+      },
+      {
+        "name": "roeWeighted",
+        "chinese_name": "净资产收益率-加权（%）"
+      },
+      {
+        "name": "roe",
+        "chinese_name": "净资产收益率-摊薄（%）"
+      },
+      {
+        "name": "roaEBIT",
+        "chinese_name": "总资产报酬率（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTop",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q2"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTop": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTop",
+    "name": "企业排行-营业周期",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q2"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "operCycle",
+        "chinese_name": "营业周期（天/次）"
+      },
+      {
+        "name": "totalAssetTRate",
+        "chinese_name": "总资产周转率（次）"
+      },
+      {
+        "name": "inventoryTRate",
+        "chinese_name": "存货周转率（次）"
+      },
+      {
+        "name": "artRate",
+        "chinese_name": "应收账款周转率（次）"
+      },
+      {
+        "name": "fixedAssetTRate",
+        "chinese_name": "固定资产周转率（次）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTop",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q2"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTop": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTop",
+    "name": "企业排行-资产负债率",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q2"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "debtAssetsRatio",
+        "chinese_name": "资产负债率（%）"
+      },
+      {
+        "name": "currentLiabilityToTL",
+        "chinese_name": "流动负债/负债合计（%）"
+      },
+      {
+        "name": "debtEquityRatio",
+        "chinese_name": "产权比率（%）"
+      },
+      {
+        "name": "currentRatio",
+        "chinese_name": "流动比率（%）"
+      },
+      {
+        "name": "quickRatio",
+        "chinese_name": "速动比率（%）"
+      },
+      {
+        "name": "cashRatio",
+        "chinese_name": "现金比率（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTop",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q2"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlowTop": {
+    "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlowTop",
+    "name": "企业排行-销售现金比率",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "指标名称",
+        "example": "2024"
+      },
+      {
+        "name": "quarter",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "Q2"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "companyName",
+        "chinese_name": "企业名称"
+      },
+      {
+        "name": "cashRateOfSales",
+        "chinese_name": "销售现金比率（%）"
+      },
+      {
+        "name": "saleServiceCashToOR",
+        "chinese_name": "销售商品提供劳务收到的现金/营业收入（%）"
+      },
+      {
+        "name": "netOperCFToOperProfTTM",
+        "chinese_name": "经营活动产生的现金流量/营业利润（%）"
+      },
+      {
+        "name": "netOperateCashFlowYOY",
+        "chinese_name": "经营活动产生的现金流量净额同比增长（%）"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlowTop",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024",
+        "quarter": "Q2"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/score/evaluateResult": {
+    "url": "/idis_industry/teis/industryZs/detail/score/evaluateResult",
+    "name": "综合评估结果",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "data",
+        "chinese_name": "数据信息"
+      },
+      {
+        "name": "industryName",
+        "chinese_name": "产业名称"
+      },
+      {
+        "name": "regionName",
+        "chinese_name": "地区名称"
+      },
+      {
+        "name": "areaName",
+        "chinese_name": "所属地域名称"
+      },
+      {
+        "name": "provinceName",
+        "chinese_name": "所属省名称"
+      },
+      {
+        "name": "year",
+        "chinese_name": "评估年份"
+      },
+      {
+        "name": "strengthCategoryList",
+        "chinese_name": "该地区该产业的优势"
+      },
+      {
+        "name": "weaknessCategoryList",
+        "chinese_name": "该地区该产业的短板"
+      },
+      {
+        "name": "itemList",
+        "chinese_name": "评估信息"
+      },
+      {
+        "name": "categoryName",
+        "chinese_name": "评估维度"
+      },
+      {
+        "name": "categoryGrade",
+        "chinese_name": "产业评级"
+      },
+      {
+        "name": "categoryScore",
+        "chinese_name": "产业得分"
+      },
+      {
+        "name": "categoryRankInNation",
+        "chinese_name": "该产业下该地区的全国排名"
+      },
+      {
+        "name": "categoryRankInNationTotal",
+        "chinese_name": "该产业下地区的全国总数"
+      },
+      {
+        "name": "categoryRankInArea",
+        "chinese_name": "该产业下，地区所在地域的排名"
+      },
+      {
+        "name": "categoryRankInAreaTotal",
+        "chinese_name": "该产业下，地区所在地域的地区总数"
+      },
+      {
+        "name": "categoryRankInProvince",
+        "chinese_name": "该产业下，地区所在省份的排名"
+      },
+      {
+        "name": "categoryRankInProvinceTotal",
+        "chinese_name": "该产业下，地区所在省份的地区总数"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/score/evaluateResult",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/score/indicatorAnalysis": {
+    "url": "/idis_industry/teis/industryZs/detail/score/indicatorAnalysis",
+    "name": "指标分析",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "data",
+        "chinese_name": "数据信息"
+      },
+      {
+        "name": "strengthItemList",
+        "chinese_name": "优势指标"
+      },
+      {
+        "name": "weaknessItemList",
+        "chinese_name": "劣势指标"
+      },
+      {
+        "name": "indicatorName",
+        "chinese_name": "指标名称"
+      },
+      {
+        "name": "indicatorScore",
+        "chinese_name": "指标得分"
+      },
+      {
+        "name": "indicatorCategory",
+        "chinese_name": "指标能力"
+      },
+      {
+        "name": "indicatorValue",
+        "chinese_name": "指标值"
+      },
+      {
+        "name": "indicatorGrade",
+        "chinese_name": "指标评级"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/score/indicatorAnalysis",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis//industryZs/detail/score/regionContrast": {
+    "url": "/idis_industry/teis//industryZs/detail/score/regionContrast",
+    "name": "地区对比",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "130400"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_702"
+      },
+      {
+        "name": "regionLevel",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "2"
+      },
+      {
+        "name": "contrastType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "CITY_CONTRAST"
+      },
+      {
+        "name": "contrastRange",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "IN_CITY"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "itemList",
+        "chinese_name": "对比地区数据"
+      },
+      {
+        "name": "regionFullName",
+        "chinese_name": "区域全称"
+      },
+      {
+        "name": "industryName",
+        "chinese_name": "产业节点名称"
+      },
+      {
+        "name": "industryGrade",
+        "chinese_name": "区域产业综合评级"
+      },
+      {
+        "name": "industryScore",
+        "chinese_name": "区域产业综合评分"
+      },
+      {
+        "name": "industryRankInNation",
+        "chinese_name": "区域产业综合评分排名_分子"
+      },
+      {
+        "name": "industryRankInNationTotal",
+        "chinese_name": "区域产业综合评分排名_分母"
+      },
+      {
+        "name": "scoreScale",
+        "chinese_name": "评分子项_产业规模"
+      },
+      {
+        "name": "scoreLeading",
+        "chinese_name": "评分子项_优质企业"
+      },
+      {
+        "name": "scoreInnovation",
+        "chinese_name": "评分子项_创新能力"
+      },
+      {
+        "name": "scoreFinance",
+        "chinese_name": "评分子项_融资能力"
+      },
+      {
+        "name": "scoreProfit",
+        "chinese_name": "评分子项_产业效益"
+      },
+      {
+        "name": "scoreGrowth",
+        "chinese_name": "评分子项_成长能力"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis//industryZs/detail/score/regionContrast",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "130400",
+        "industryCode": "tree_702",
+        "regionLevel": "2",
+        "contrastType": "CITY_CONTRAST",
+        "contrastRange": "IN_CITY"
+      }
+    }
+  },
+  "/idis_industry/teis//industryZs/detail/score/industryContrast": {
+    "url": "/idis_industry/teis//industryZs/detail/score/industryContrast",
+    "name": "产业节点对比",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_702"
+      },
+      {
+        "name": "regionLevel",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "2"
+      },
+      {
+        "name": "contrastType",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": ""
+      },
+      {
+        "name": "contrastRange",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "TREE"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "itemList",
+        "chinese_name": "对比节点数据"
+      },
+      {
+        "name": "regionFullName",
+        "chinese_name": "区域全称"
+      },
+      {
+        "name": "industryName",
+        "chinese_name": "产业节点名称"
+      },
+      {
+        "name": "industryGrade",
+        "chinese_name": "产业综合评级"
+      },
+      {
+        "name": "industryScore",
+        "chinese_name": "产业综合评分"
+      },
+      {
+        "name": "industryRankInNation",
+        "chinese_name": "产业综合评分排名_分子"
+      },
+      {
+        "name": "industryRankInNationTotal",
+        "chinese_name": "产业综合评分排名_分母"
+      },
+      {
+        "name": "scoreScale",
+        "chinese_name": "评分子项_产业规模"
+      },
+      {
+        "name": "scoreLeading",
+        "chinese_name": "评分子项_优质企业"
+      },
+      {
+        "name": "scoreInnovation",
+        "chinese_name": "评分子项_创新能力"
+      },
+      {
+        "name": "scoreFinance",
+        "chinese_name": "评分子项_融资能力"
+      },
+      {
+        "name": "scoreProfit",
+        "chinese_name": "评分子项_产业效益"
+      },
+      {
+        "name": "scoreGrowth",
+        "chinese_name": "评分子项_成长能力"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis//industryZs/detail/score/industryContrast",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_702",
+        "regionLevel": "2",
+        "contrastRange": "TREE"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/concentration/regionContrast": {
+    "url": "/idis_industry/teis/industryZs/detail/concentration/regionContrast",
+    "name": "区域对比",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "2024"
+      }
+    ],
+    "request_body": null,
+    "output_params": [],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/concentration/regionContrast",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/concentration/industryContrast": {
+    "url": "/idis_industry/teis/industryZs/detail/concentration/industryContrast",
+    "name": "节点对比",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "2024"
+      }
+    ],
+    "request_body": null,
+    "output_params": [],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/concentration/industryContrast",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/concentration/intro": {
+    "url": "/idis_industry/teis/industryZs/detail/concentration/intro",
+    "name": "产业集中度",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      },
+      {
+        "name": "year",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "example": "2024"
+      }
+    ],
+    "request_body": null,
+    "output_params": [],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/concentration/intro",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450",
+        "year": "2024"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/industryRegionDistribution": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryRegionDistribution",
+    "name": "企业区域类型分布",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "csf_20121800"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "industryItemList",
+        "chinese_name": "产业节点分布"
+      },
+      {
+        "name": "industryName",
+        "chinese_name": "产业节点名称"
+      },
+      {
+        "name": "regionItemList",
+        "chinese_name": "区域分布"
+      },
+      {
+        "name": "regionName",
+        "chinese_name": "区域名称"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数量"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryRegionDistribution",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "csf_20121800"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/pieChartBundle": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/pieChartBundle",
+    "name": "企业统计饼图",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "regionName",
+        "chinese_name": "地区名称"
+      },
+      {
+        "name": "natureItemList",
+        "chinese_name": "企业性质"
+      },
+      {
+        "name": "name",
+        "chinese_name": "条目名称"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数量"
+      },
+      {
+        "name": "ratio",
+        "chinese_name": "数量占比"
+      },
+      {
+        "name": "ageItemList",
+        "chinese_name": "企业经营年限"
+      },
+      {
+        "name": "capitalItemList",
+        "chinese_name": "企业注册资本"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/pieChartBundle",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/typeDistribution": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/typeDistribution",
+    "name": "产业企业类型信息",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "itemList",
+        "chinese_name": "企业类型"
+      },
+      {
+        "name": "typeName",
+        "chinese_name": "类型名称"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数量"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/typeDistribution",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/regionDistribution": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/regionDistribution",
+    "name": "企业区域分布",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "itemList",
+        "chinese_name": "企业区域分布"
+      },
+      {
+        "name": "regionName",
+        "chinese_name": "区域名称"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数"
+      },
+      {
+        "name": "concentrationRate",
+        "chinese_name": "集中度"
+      },
+      {
+        "name": "compositeScore",
+        "chinese_name": "评分"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/regionDistribution",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/industryDistribution": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryDistribution",
+    "name": "产业节点分布",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "itemList",
+        "chinese_name": "产业节点分布"
+      },
+      {
+        "name": "industryName",
+        "chinese_name": "产业节点名称"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数量"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryDistribution",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  },
+  "/idis_industry/teis/industryZs/detail/companyPortrait/scaleChartBundle": {
+    "url": "/idis_industry/teis/industryZs/detail/companyPortrait/scaleChartBundle",
+    "name": "企业规模趋势",
+    "method": "GET",
+    "request_params": [
+      {
+        "name": "industryType",
+        "type": "string",
+        "required": true,
+        "description": "产业类型（默认：SELECTED)",
+        "example": "SELECTED"
+      },
+      {
+        "name": "regionCode",
+        "type": "string",
+        "required": false,
+        "description": "地区代码",
+        "example": "110000"
+      },
+      {
+        "name": "industryCode",
+        "type": "string",
+        "required": false,
+        "description": "产业代码",
+        "example": "tree_450"
+      }
+    ],
+    "request_body": null,
+    "output_params": [
+      {
+        "name": "stockItemList",
+        "chinese_name": "规模趋势"
+      },
+      {
+        "name": "time",
+        "chinese_name": "时间"
+      },
+      {
+        "name": "scaleItemList",
+        "chinese_name": "企业规模"
+      },
+      {
+        "name": "scale",
+        "chinese_name": "企业规模"
+      },
+      {
+        "name": "companyCount",
+        "chinese_name": "企业数量"
+      }
+    ],
+    "demo": {
+      "url": "/idis_industry/teis/industryZs/detail/companyPortrait/scaleChartBundle",
+      "method": "GET",
+      "params": {
+        "industryType": "SELECTED",
+        "regionCode": "110000",
+        "industryCode": "tree_450"
+      }
+    }
+  }
+}
