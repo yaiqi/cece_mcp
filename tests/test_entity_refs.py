@@ -33,3 +33,15 @@ class EntityReferenceModelTests(unittest.TestCase):
         self.assertIs(inspect.signature(park.park_detail).parameters["park_ref"].annotation, ParkRef)
         self.assertIs(inspect.signature(group.group_detail).parameters["group_ref"].annotation, GroupRef)
         self.assertIs(inspect.signature(region.region_score).parameters["region_ref"].annotation, RegionRef)
+
+    def test_park_query_docs_describe_the_standard_park_reference(self):
+        for tool in (
+            park.park_detail,
+            park.park_sub_parks,
+            park.park_industry_distribution,
+            park.park_company_features,
+            park.park_companies,
+        ):
+            with self.subTest(tool=tool.__name__):
+                self.assertIn("park_ref", tool.__doc__)
+                self.assertNotIn("name_or_id", tool.__doc__)
