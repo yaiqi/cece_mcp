@@ -6,6 +6,12 @@ from models.entity_refs import GroupRef, ParkRef, RegionRef
 
 
 class EntityReferenceModelTests(unittest.TestCase):
+    def test_group_ref_requires_only_group_id_and_group_name(self):
+        ref = GroupRef(group_id="G1", group_name="测试集团")
+
+        self.assertEqual(ref.group_id, "G1")
+        self.assertEqual(set(GroupRef.model_json_schema()["required"]), {"group_id", "group_name"})
+
     def test_park_ref_requires_all_three_standard_fields(self):
         ref = ParkRef(
             park_id="P1",

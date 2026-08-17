@@ -24,10 +24,6 @@ class CompanyRef(EntityRef):
 class GroupRef(EntityRef):
     group_id: str = Field(description="集团 ID")
     group_name: str = Field(description="集团全称")
-    member_company_query_id: str = Field(
-        alias="成员企业查询标识",
-        description="查询集团成员企业所需的内部标识",
-    )
 
 
 class IndustryRef(EntityRef):

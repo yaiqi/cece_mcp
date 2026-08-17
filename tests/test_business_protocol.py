@@ -10,7 +10,7 @@ from common.business_protocol import (
     调用失败,
 )
 from common import milvus_client
-from entities import park
+from entities import group, park
 
 
 class BusinessProtocolTests(unittest.IsolatedAsyncioTestCase):
@@ -60,3 +60,88 @@ class BusinessProtocolTests(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(result["状态码"], "调用失败")
         self.assertNotIn("Milvus unavailable", result["摘要"])
+
+    async def test_resolve_group_keeps_candidate_id_and_hides_similarity_score(self):
+        with patch.object(
+            group,
+            "resolve_single",
+            new=AsyncMock(return_value={
+                "status": "ambiguous",
+                "candidates": [{"group_id": "G0001", "group_name": "测试集团", "score": 0.7}],
+            }),
+        ):
+            result = await group.resolve_group("测试集团")
+
+        self.assertEqual(result["状态码"], "多候选")
+        self.assertEqual(result["候选列表"], [{"group_id": "G0001", "group_name": "测试集团"}])
+
+    async def test_group_companies_loads_its_internal_query_identifier(self):
+        with (
+            patch.object(
+                group,
+                "_get_group_meta",
+                new=AsyncMock(return_value={"group_name": "测试集团", "zjs_group_id": "ZJSG0001"}),
+            ),
+            patch.object(group, "api_post", new=AsyncMock(return_value={"success": True, "data": {}})) as api_post,
+        ):
+            await group.group_companies({"group_id": "G0001", "group_name": "测试集团"})
+
+        self.assertEqual(api_post.await_args.args[1]["groupId"], "ZJSG0001")
+
+    async def test_group_detail_returns_chinese_model_facing_data(self):
+        response = {
+            "success": True,
+            "data": {
+                "groupId": "G0001",
+                "groupName": "测试集团",
+                "groupLevel": "大型集团",
+                "companyCount": 12,
+                "companyInfo": {
+                    "companyId": "C0001",
+                    "companyName": "测试成员企业",
+                    "industryCode": "C39",
+                    "industryName": "计算机、通信和其他电子设备制造业",
+                },
+            },
+        }
+        with patch.object(group, "api_get", new=AsyncMock(return_value=response)):
+            result = await group.group_detail({"group_id": "G0001", "group_name": "测试集团"})
+
+        self.assertEqual(result["状态"], "查询成功")
+        self.assertEqual(
+            result["数据"],
+            {
+                "集团名称": "测试集团",
+                "集团级别": "大型集团",
+                "企业数量": 12,
+                "企业信息": {
+                    "企业名称": "测试成员企业",
+                    "产业名称": "计算机、通信和其他电子设备制造业",
+                },
+            },
+        )
+
+    async def test_group_events_keep_structure_but_remove_identifiers(self):
+        response = {
+            "success": True,
+            "data": {
+                "totalCount": 1,
+                "list": [{
+                    "eventId": "E0001",
+                    "eventName": "经营风险事件",
+                    "eventTypeCode": "Z0101",
+                    "eventTypeName": "司法风险",
+                    "companyName": "测试企业",
+                }],
+            },
+        }
+        with patch.object(group, "api_post", new=AsyncMock(return_value=response)):
+            result = await group.group_risk_events({"group_id": "G0001", "group_name": "测试集团"})
+
+        self.assertEqual(
+            result["数据"],
+            {
+                "总数": 1,
+                "列表": [{"事件名称": "经营风险事件", "事件类型": "司法风险", "企业名称": "测试企业"}],
+            },
+        )
