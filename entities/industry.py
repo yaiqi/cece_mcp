@@ -83,7 +83,7 @@ from datetime import datetime
 
 from common.address import get_address
 from common.api_client import api_get, api_post, unwrap
-from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.business_protocol import call_failed, multiple_candidates, no_match, unique_match
 from models.entity_refs import IndustryRef, RegionRef
 
 _INDUSTRY_TYPES = ("SELECTED", "CSF", "NSEI", "GB", "DE")
@@ -97,9 +97,9 @@ async def resolve_industry(query: str, industry_type: str) -> dict:
     if result:
         if result.get("status") == "ambiguous":
             candidates = result.get("candidates", [])
-            return 多候选("产业", query, candidates) if candidates else 未匹配("产业", query)
-        return 调用失败(result.get("error_message", "产业消歧调用失败。"))
-    return 唯一匹配("产业", query, {"industry_code": industry_code, "industry_type": industry_type})
+            return multiple_candidates("产业", query, candidates) if candidates else no_match("产业", query)
+        return call_failed(result.get("error_message", "产业消歧调用失败。"))
+    return unique_match("产业", query, {"industry_code": industry_code, "industry_type": industry_type})
 
 
 def _has_cjk(text: str) -> bool:

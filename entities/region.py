@@ -15,7 +15,7 @@ from datetime import datetime
 
 from common.address import get_address
 from common.api_client import api_get, api_post, unwrap
-from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.business_protocol import call_failed, multiple_candidates, no_match, unique_match
 from models.entity_refs import RegionRef
 
 _STAT_ENDPOINTS = {
@@ -41,9 +41,9 @@ async def resolve_region(query: str) -> dict:
     if result:
         if result.get("status") == "ambiguous":
             candidates = result.get("candidates", [])
-            return 多候选("区域", query, candidates) if candidates else 未匹配("区域", query)
-        return 调用失败(result.get("error_message", "区域消歧调用失败。"))
-    return 唯一匹配("区域", query, {
+            return multiple_candidates("区域", query, candidates) if candidates else no_match("区域", query)
+        return call_failed(result.get("error_message", "区域消歧调用失败。"))
+    return unique_match("区域", query, {
         "region_code": region["region_code"],
         "region_name": region["region_name"],
         "province_name": region.get("province_name", ""),

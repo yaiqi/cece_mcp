@@ -2,12 +2,12 @@ import unittest
 from unittest.mock import AsyncMock, patch
 
 from common.business_protocol import (
-    多候选,
-    唯一匹配,
-    实体未匹配,
-    查询成功,
-    查询无数据,
-    调用失败,
+    call_failed,
+    entity_not_matched,
+    multiple_candidates,
+    no_data,
+    query_success,
+    unique_match,
 )
 from common import milvus_client
 from entities import group, park
@@ -45,14 +45,14 @@ class BusinessProtocolTests(unittest.IsolatedAsyncioTestCase):
         self.assertNotIn("score", result["candidates"][0])
 
     def test_resolution_responses_use_chinese_status_codes(self):
-        self.assertEqual(唯一匹配("集团", "国家电网", {"group_id": "G1"})["状态码"], "唯一匹配")
-        self.assertEqual(多候选("园区", "张江", [])["状态码"], "多候选")
-        self.assertEqual(实体未匹配("企业", "腾讯")["状态码"], "实体未匹配")
+        self.assertEqual(unique_match("集团", "国家电网", {"group_id": "G1"})["状态码"], "唯一匹配")
+        self.assertEqual(multiple_candidates("园区", "张江", [])["状态码"], "多候选")
+        self.assertEqual(entity_not_matched("企业", "腾讯")["状态码"], "实体未匹配")
 
     def test_query_responses_distinguish_no_data_and_failure(self):
-        self.assertEqual(查询成功({})["状态码"], "查询成功")
-        self.assertEqual(查询无数据("未查询到公开记录")["状态码"], "查询无数据")
-        self.assertEqual(调用失败("上游服务异常")["状态码"], "调用失败")
+        self.assertEqual(query_success({})["状态码"], "查询成功")
+        self.assertEqual(no_data("未查询到公开记录")["状态码"], "查询无数据")
+        self.assertEqual(call_failed("上游服务异常")["状态码"], "调用失败")
 
     async def test_resolve_park_converts_milvus_exception_to_business_failure(self):
         with patch.object(park, "_resolve_park", new=AsyncMock(side_effect=RuntimeError("Milvus unavailable"))):

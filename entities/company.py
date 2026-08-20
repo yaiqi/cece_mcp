@@ -143,10 +143,10 @@ monitorInfo/favoriteInfo 嵌套对象），明显是两套不同的搜索底层
 from functools import wraps
 
 from common.api_client import api_get, api_post, unwrap
-from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.business_protocol import call_failed, multiple_candidates, no_match, unique_match
 
 
-def _企业查询工具(tool):
+def _company_query_tool(tool):
     """将后端的“成功但 data=null”统一解释为企业主体未匹配。"""
     @wraps(tool)
     async def wrapper(company_name: str, *args, **kwargs):
@@ -165,10 +165,10 @@ async def resolve_company(query: str) -> dict:
     """按企业简称、品牌或名称搜索候选；用户确认后再调用企业查询工具。"""
     result = await company_advanced_search(view="关键词", keyword=query)
     if result.get("status") != "success":
-        return 调用失败(result.get("error_message", "企业消歧调用失败。"))
+        return call_failed(result.get("error_message", "企业消歧调用失败。"))
     data = result.get("data")
     if not data:
-        return 未匹配("企业", query)
+        return no_match("企业", query)
     if isinstance(data, list):
         candidates = data
     elif isinstance(data, dict):
@@ -179,12 +179,12 @@ async def resolve_company(query: str) -> dict:
     else:
         candidates = []
     if not candidates:
-        return 未匹配("企业", query)
+        return no_match("企业", query)
     exact = [item for item in candidates if item.get("companyName") == query or item.get("name") == query]
     if len(exact) == 1:
         company_name = exact[0].get("companyName") or exact[0].get("name")
-        return 唯一匹配("企业", query, {"company_name": company_name})
-    return 多候选("企业", query, candidates[:20])
+        return unique_match("企业", query, {"company_name": company_name})
+    return multiple_candidates("企业", query, candidates[:20])
 
 # ---------------------------------------------------------------------------
 # 1. 司法风险
@@ -205,7 +205,7 @@ _JUDICIAL_RISK_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_judicial_risk(
     company_name: str,
     risk_type: str,
@@ -273,7 +273,7 @@ _OPERATING_RISK_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_operating_risk(
     company_name: str,
     risk_type: str,
@@ -330,7 +330,7 @@ async def company_operating_risk(
 # 3. 工商登记信息
 # ---------------------------------------------------------------------------
 
-@_企业查询工具
+@_company_query_tool
 async def company_registration_info(
     company_name: str,
     view: str = "工商信息",
@@ -460,7 +460,7 @@ _IP_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_ip(
     company_name: str,
     view: str = "专利趋势",
@@ -538,7 +538,7 @@ _GRAPH_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_graph(company_name: str, view: str = "企业图谱") -> dict:
     """查询企业关系图谱，按 view 参数选择具体类型。
 
@@ -575,7 +575,7 @@ _SCORE_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_score(company_name: str, view: str = "总分") -> dict:
     """查询企业评分，按 view 参数选择具体维度。
 
@@ -616,7 +616,7 @@ _NEWS_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_news(
     company_name: str,
     view: str = "舆情",
@@ -684,7 +684,7 @@ _QUALIFICATION_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_qualification(
     company_name: str, view: str = "科技资质", filter_value: str = ""
 ) -> dict:
@@ -736,7 +736,7 @@ _FINANCIALS_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_financials(
     company_name: str,
     view: str = "财务概览",
@@ -826,7 +826,7 @@ _BUSINESS_DETAIL_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_business_detail(company_name: str, view: str = "客户") -> dict:
     """查询企业经营明细信息，按 view 参数选择具体类型。
 
@@ -981,7 +981,7 @@ async def company_advanced_search(
 # 也不重复实现 region.py 已经有的 amount/type/region/trend/top/patent-stat）
 # ---------------------------------------------------------------------------
 
-@_企业查询工具
+@_company_query_tool
 async def company_finance_summary(
     company_name: str, view: str = "融资概览", start: str = "", end: str = ""
 ) -> dict:
@@ -1018,7 +1018,7 @@ async def company_finance_summary(
     return unwrap(resp)
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_finance_events(
     company_name: str,
     finance_type: int | None = None,
@@ -1073,7 +1073,7 @@ _CREDIT_INVESTMENT_ENDPOINTS = {
 }
 
 
-@_企业查询工具
+@_company_query_tool
 async def company_credit_and_investment(
     company_name: str,
     view: str = "授信额度",

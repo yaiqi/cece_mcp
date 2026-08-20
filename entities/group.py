@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 from common.api_client import api_get, api_post, unwrap
 from common.milvus_client import resolve_single
-from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.business_protocol import call_failed, multiple_candidates, no_match, unique_match
 from models.entity_refs import GroupRef
 
 # 硬编码别名：跟 material/集团/获取集团全称-生产.yml 里的 ALIAS_MAP 保持一致，
@@ -22,7 +22,7 @@ _ALIAS_MAP = {
 }
 
 # 对外工具不暴露接口实现字段；其余字段只改中文名称，不调整原始层级、列表或数值。
-_字段中文名 = {
+_FIELD_LABELS = {
     "data": "数据",
     "list": "列表",
     "rows": "列表",
@@ -87,33 +87,33 @@ _字段中文名 = {
 }
 
 
-def _去除内部标识字段(data: Any) -> Any:
+def _remove_internal_identifier_fields(data: Any) -> Any:
     """递归移除只供接口关联的 ID、code 字段。"""
     if isinstance(data, list):
-        return [_去除内部标识字段(item) for item in data]
+        return [_remove_internal_identifier_fields(item) for item in data]
     if not isinstance(data, dict):
         return data
     return {
-        key: _去除内部标识字段(value)
+        key: _remove_internal_identifier_fields(value)
         for key, value in data.items()
         if key not in {"id", "code"}
         and not key.endswith(("_id", "_code", "Id", "Code"))
     }
 
 
-def _中文化字段(data: Any) -> Any:
+def _translate_fields_to_chinese(data: Any) -> Any:
     """保持数据结构不变，仅将已知接口字段转为中文业务语义。"""
     if isinstance(data, list):
-        return [_中文化字段(item) for item in data]
+        return [_translate_fields_to_chinese(item) for item in data]
     if not isinstance(data, dict):
         return data
     return {
-        _字段中文名.get(key, key): _中文化字段(value)
+        _FIELD_LABELS.get(key, key): _translate_fields_to_chinese(value)
         for key, value in data.items()
     }
 
 
-def _集团查询结果(result: dict, 成功摘要: str) -> dict:
+def _format_group_query_result(result: dict, success_summary: str) -> dict:
     """将接口响应适配为便于模型阅读的中文业务结果。"""
     if result.get("status") != "success":
         return {
@@ -123,8 +123,8 @@ def _集团查询结果(result: dict, 成功摘要: str) -> dict:
     data = result.get("data")
     if data is None or data == {} or data == []:
         return {"状态": "查询无数据", "摘要": "查询成功，但未返回相关数据。", "数据": []}
-    data = _中文化字段(_去除内部标识字段(data))
-    return {"状态": "查询成功", "摘要": 成功摘要, "数据": data}
+    data = _translate_fields_to_chinese(_remove_internal_identifier_fields(data))
+    return {"状态": "查询成功", "摘要": success_summary, "数据": data}
 
 _RISK_TYPE_CODES = [
     "Z0101", "Z0102", "Z0103", "Z0104", "Z0105", "Z0106", "Z0107", "Z0108", "Z0109",
@@ -155,17 +155,17 @@ async def resolve_group(query: str) -> dict:
     if result:
         if result.get("status") == "ambiguous":
             candidates = result.get("candidates", [])
-            return 多候选("集团", query, candidates) if candidates else 未匹配("集团", query)
-        return 调用失败(result.get("error_message", "集团消歧调用失败。"))
-    return await _确认集团并生成引用(group_id, query)
+            return multiple_candidates("集团", query, candidates) if candidates else no_match("集团", query)
+        return call_failed(result.get("error_message", "集团消歧调用失败。"))
+    return await _build_group_ref(group_id, query)
 
 
-async def _确认集团并生成引用(group_id: str, query: str) -> dict:
+async def _build_group_ref(group_id: str, query: str) -> dict:
     """通过集团详情接口校验候选 ID，并生成对外标准集团实体。"""
     meta = await _get_group_meta(group_id)
     if not meta:
-        return 调用失败("已识别集团，但获取标准集团引用失败。")
-    return 唯一匹配("集团", query, {
+        return call_failed("已识别集团，但获取标准集团引用失败。")
+    return unique_match("集团", query, {
         "group_id": group_id,
         "group_name": meta.get("group_name", ""),
     })
@@ -183,7 +183,7 @@ async def group_detail(group_ref: GroupRef) -> dict:
     resp = await api_get(
         "/idis_industry/teis/landing/company/group/get", {"groupId": group_ref["group_id"]}
     )
-    return _集团查询结果(unwrap(resp), "已查询到集团基本信息。")
+    return _format_group_query_result(unwrap(resp), "已查询到集团基本信息。")
 
 
 async def group_class_count(group_ref: GroupRef) -> dict:
@@ -199,7 +199,7 @@ async def group_class_count(group_ref: GroupRef) -> dict:
         "/idis_industry/teis/landing/company/group/quickTab",
         {"groupId": group_ref["group_id"], "industryType": "GB"},
     )
-    return _集团查询结果(unwrap(resp), "已查询到集团下属企业分类统计。")
+    return _format_group_query_result(unwrap(resp), "已查询到集团下属企业分类统计。")
 
 
 async def group_companies(
@@ -258,7 +258,7 @@ async def group_companies(
         body["controlRatioIntervalRange"] = control_ratio_interval_range
 
     resp = await api_post("/idis_industry/teis/landing/company/search", body)
-    return _集团查询结果(unwrap(resp), "已查询到集团成员企业列表。")
+    return _format_group_query_result(unwrap(resp), "已查询到集团成员企业列表。")
 
 
 def _simplify_finance_graphy(data: dict) -> dict:
@@ -345,7 +345,7 @@ async def group_finance_graphy(group_ref: GroupRef) -> dict:
     result = unwrap(resp)
     if result["status"] == "success" and result["data"]:
         result["data"] = _simplify_finance_graphy(result["data"])
-    return _集团查询结果(result, "已查询到集团融资图谱。")
+    return _format_group_query_result(result, "已查询到集团融资图谱。")
 
 
 def _simplify_qualification_graphy(data: dict) -> dict:
@@ -431,7 +431,7 @@ async def group_qualification_graphy(group_ref: GroupRef) -> dict:
     result = unwrap(resp)
     if result["status"] == "success" and result["data"]:
         result["data"] = _simplify_qualification_graphy(result["data"])
-    return _集团查询结果(result, "已查询到集团资质图谱。")
+    return _format_group_query_result(result, "已查询到集团资质图谱。")
 
 
 async def group_industry_graphy(
@@ -458,7 +458,7 @@ async def group_industry_graphy(
             "maxRatio": max_ratio,
         },
     )
-    return _集团查询结果(unwrap(resp), "已查询到集团产业分布图谱。")
+    return _format_group_query_result(unwrap(resp), "已查询到集团产业分布图谱。")
 
 
 async def _group_events(
@@ -514,7 +514,7 @@ async def group_risk_events(
         group_ref["group_id"], [1, 2], _RISK_TYPE_CODES, is_core,
         control_ratio_interval_range, page_num, page_size,
     )
-    return _集团查询结果(result, "已查询到集团风险事件。")
+    return _format_group_query_result(result, "已查询到集团风险事件。")
 
 
 async def group_opportunity_events(
@@ -540,7 +540,7 @@ async def group_opportunity_events(
         group_ref["group_id"], [3, 4], _OPPORTUNITY_TYPE_CODES, is_core,
         control_ratio_interval_range, page_num, page_size,
     )
-    return _集团查询结果(result, "已查询到集团商机事件。")
+    return _format_group_query_result(result, "已查询到集团商机事件。")
 
 
 async def _resolve_group_id(name_or_id: str) -> tuple[str | None, dict | None]:

@@ -10,7 +10,7 @@
 """
 
 from common.api_client import api_post, unwrap
-from common.business_protocol import 唯一匹配, 多候选, 未匹配, 调用失败
+from common.business_protocol import call_failed, multiple_candidates, no_match, unique_match
 from models.entity_refs import PersonRef
 
 _CONFIDENCE_RATIO = 5  # 第一名 companyAmount 至少是第二名的这个倍数，才自动采用
@@ -22,9 +22,9 @@ async def resolve_person(query: str) -> dict:
     if result:
         if result.get("status") == "ambiguous":
             candidates = result.get("candidates", [])
-            return 多候选("人物", query, candidates) if candidates else 未匹配("人物", query)
-        return 调用失败(result.get("error_message", "人物消歧调用失败。"))
-    return 唯一匹配("人物", query, {"person_no": person_no})
+            return multiple_candidates("人物", query, candidates) if candidates else no_match("人物", query)
+        return call_failed(result.get("error_message", "人物消歧调用失败。"))
+    return unique_match("人物", query, {"person_no": person_no})
 
 
 async def _resolve_person(name_or_id: str) -> tuple[str | None, dict | None]:
