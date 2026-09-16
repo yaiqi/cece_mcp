@@ -2,52 +2,41 @@ import unittest
 from pathlib import Path
 
 from servers import (
-    company_server,
-    group_server,
-    industry_server,
-    park_server,
-    person_server,
-    region_server,
+    enterprise_server,
+    entity_resolve_server,
+    finance_server,
+    person_insight_server,
 )
 
 
 class ServerRegistrationTests(unittest.TestCase):
     def test_each_server_has_only_its_entity_tools(self):
         expected_tools = {
-            company_server: {
-                "company_judicial_risk", "company_operating_risk", "company_registration_info",
-                "company_ip", "company_graph", "company_score", "company_news",
-                "company_qualification", "company_financials", "company_business_detail",
-                "company_advanced_search", "company_finance_summary", "company_finance_events",
-                "company_credit_and_investment", "resolve_company",
+            finance_server: {
+                "search_financing_companies", "get_industryFund_list",
+                "search_industryFund_investmen_list", "get_industryFund_exit_list",
+                "get_fund_detail_basic", "get_fund_detail_investor_list",
+                "get_fund_detail_investment_list", "get_fund_detail_exit_list",
+                "get_query_competitive_Finance",
             },
-            group_server: {
-                "group_detail", "group_class_count", "group_companies", "group_finance_graphy",
-                "group_industry_graphy", "group_qualification_graphy", "group_risk_events",
-                "group_opportunity_events", "resolve_group",
+            enterprise_server: {
+                "get_enterprise_tags", "get_enterprise_basic",
+                "get_enterprise_shareholders", "get_enterprise_management",
+                "get_enterprise_VCPE_financing", "get_enterprise_stock_financing",
+                "get_enterprise_bond_financing", "get_enterprise_bondHolder",
+                "get_enterprise_bank_financing", "get_enterprise_receivables_financing",
+                "get_enterprise_leasing_financing", "get_enterprise_trust_financing",
+                "get_enterprise_credit_financing", "get_enterprise_outbound_investment",
+                "get_company_graphy", "get_businessFinance_graphy",
+                "get_query_winTenderer_tenderee",
             },
-            industry_server: {
-                "industry_score", "industry_score_comparison", "industry_concentration",
-                "industry_company_portrait", "industry_financial_trend", "industry_company_financial",
-                "industry_innovation", "resolve_industry",
+            person_insight_server: {
+                "resolve_person", "get_person_legal", "get_person_office",
+                "get_person_beneficial", "get_person_controller", "get_person_holder",
+                "get_person_union", "get_person_partner", "get_talent_basic",
             },
-            park_server: {
-                "park_detail", "park_sub_parks", "park_industry_distribution",
-                "park_company_features", "park_companies", "resolve_park",
-            },
-            person_server: {
-                "person_detail", "person_legal_representative", "person_office", "person_beneficial",
-                "person_controller", "person_group", "person_union", "person_partners",
-                "person_shareholding", "resolve_person",
-            },
-            region_server: {
-                "region_score", "region_company_stats", "region_patent_stats",
-                "region_fourteenth_five_year_industries", "region_finance_summary",
-                "region_finance_distribution", "region_finance_trend", "region_finance_by_subregion",
-                "region_finance_top_companies", "region_finance_events", "region_company_search",
-                "region_park_list", "region_macro_portrait", "region_macro_key_indicators",
-                "region_social_financing", "region_park_distribution", "region_park_statistics",
-                "region_development_zone_list", "resolve_region",
+            entity_resolve_server: {
+                "get_industry_tree", "get_region_tree", "search_enterprise_by_name",
             },
         }
 
@@ -57,13 +46,15 @@ class ServerRegistrationTests(unittest.TestCase):
 
     def test_each_server_has_a_unique_entity_route(self):
         servers = [
-            company_server, group_server, industry_server,
-            park_server, person_server, region_server,
+            finance_server, enterprise_server, person_insight_server,
+            entity_resolve_server,
         ]
 
-        self.assertEqual(len({server.ROUTE for server in servers}), 6)
-        self.assertEqual(group_server.ROUTE, "/mcp/group/stream")
-        self.assertEqual(region_server.ROUTE, "/mcp/region/stream")
+        self.assertEqual(len({server.ROUTE for server in servers}), 4)
+        self.assertEqual(finance_server.ROUTE, "/cece-mcp-servers/PEVC/stream")
+        self.assertEqual(enterprise_server.ROUTE, "/cece-mcp-servers/enterprise/stream")
+        self.assertEqual(person_insight_server.ROUTE, "/cece-mcp-servers/person/stream")
+        self.assertEqual(entity_resolve_server.ROUTE, "/cece-mcp-servers/NER/stream")
 
     def test_legacy_aggregate_server_is_removed(self):
         self.assertFalse(Path("server.py").exists())

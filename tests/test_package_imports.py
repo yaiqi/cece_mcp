@@ -32,12 +32,9 @@ class PackageImportTests(unittest.TestCase):
         self.assertEqual(invalid_identifiers, [])
 
     def test_project_root_modules_import_without_parent_directory_on_python_path(self):
-        from entities import company, group, industry, park, person, region
+        from entities import enterprise, entity_resolve, finance, person_insight
 
-        self.assertEqual(group.__name__, "entities.group")
-        self.assertEqual(company.__name__, "entities.company")
-        self.assertEqual(industry.__name__, "entities.industry")
-        self.assertEqual(park.__name__, "entities.park")
-        self.assertEqual(person.__name__, "entities.person")
-        self.assertEqual(region.__name__, "entities.region")
-
+        self.assertEqual(enterprise.__name__, "entities.enterprise")
+        self.assertEqual(entity_resolve.__name__, "entities.entity_resolve")
+        self.assertEqual(finance.__name__, "entities.finance")
+        self.assertEqual(person_insight.__name__, "entities.person_insight")

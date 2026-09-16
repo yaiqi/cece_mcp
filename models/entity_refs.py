@@ -17,33 +17,5 @@ class EntityRef(BaseModel):
         return self.model_dump(by_alias=True).get(key, default)
 
 
-class CompanyRef(EntityRef):
-    company_name: str = Field(description="企业完整登记名称")
-
-
-class GroupRef(EntityRef):
-    group_id: str = Field(description="集团 ID")
-    group_name: str = Field(description="集团全称")
-
-
-class IndustryRef(EntityRef):
-    industry_code: str = Field(description="产业分类代码")
-    industry_type: str = Field(description="产业分类体系")
-
-
-class ParkRef(EntityRef):
-    park_id: str = Field(description="园区 ID")
-    zjs_park_id: str = Field(description="园区 ZJS 格式 ID")
-    park_name: str = Field(description="园区全称")
-
-
 class PersonRef(EntityRef):
     person_no: str = Field(description="人物唯一编号")
-
-
-class RegionRef(EntityRef):
-    region_code: str = Field(description="行政区划代码")
-    region_name: str = Field(description="区域名称")
-    province_name: str = Field(description="省级区域名称")
-    city_name: str = Field(description="市级区域名称")
-    district_name: str = Field(description="区县名称")

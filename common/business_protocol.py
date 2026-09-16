@@ -1,4 +1,13 @@
-"""Entity MCP 面向 Agent 的中文业务状态返回合同。"""
+"""Entity MCP 面向 Agent 的中文业务状态返回合同。
+
+MCP 规范约定：
+- 正常结果 -> 返回 dict（isError=false）
+- 工具执行错误 -> raise ToolError（FastMCP 自动转为 isError=true 的 CallToolResult）
+  适用场景：API 调用失败、查询无数据、实体未匹配、参数不合法、无权限。
+- 消歧结果（唯一匹配/多候选/未匹配）属于正常业务流程，不作为错误。
+"""
+
+from fastmcp.exceptions import ToolError
 
 
 def _response(status_code: str, summary: str, **fields: object) -> dict:
@@ -17,17 +26,13 @@ def no_match(entity_type: str, query: str) -> dict:
     return _response("未匹配", f"未匹配到{entity_type}主体，请检查关键词后重试。", 检索关键字=query, 候选列表=[])
 
 
-def entity_not_matched(entity_type: str, raw_input: str) -> dict:
-    return _response("实体未匹配", f"未匹配到{entity_type}主体，请调用对应实体消歧工具获取候选。", 原始输入=raw_input)
-
-
 def query_success(data: object) -> dict:
     return _response("查询成功", "查询成功。", 数据=data)
 
 
 def no_data(summary: str) -> dict:
-    return _response("查询无数据", summary, 数据=[])
+    raise ToolError(summary)
 
 
 def call_failed(summary: str) -> dict:
-    return _response("调用失败", summary)
+    raise ToolError(summary)
