@@ -121,6 +121,76 @@ entity_MCP/
 
 错误状态码采用**集中拦截**机制：`server_factory.register_tools()` 中的 wrapper 自动检测函数返回的 `"状态码"` 或 `status == "error"`，统一转为 `ToolError`，由 FastMCP 框架序列化为 MCP 标准错误响应。
 
+## MCP 鉴权
+
+本服务支持 MCP 标准 OAuth 2.1 鉴权（符合 MCP 规范），由 FastMCP 框架内置支持，不侵入工具逻辑。
+
+### 鉴权方式
+
+**OAuth 2.1 授权码流程（推荐）**：
+客户端通过标准的 OAuth 2.1 授权码流程（支持 PKCE）获取 access_token，后续 MCP 请求自动携带。
+
+**客户端凭证流程**：
+适用于服务间调用，通过 `client_id` + `client_secret` 直接换取 access_token。
+
+### 启用鉴权
+
+每个服务入口文件（如 `servers/finance_server.py`）已预置 OAuth 2.1 Provider 配置，取消注释即可启用：
+
+```python
+from common.auth import create_oauth_provider
+
+SERVICE_KEY = "finance"
+OAUTH_PROVIDER = create_oauth_provider(SERVICE_KEY)
+mcp = create_mcp(SERVICE_KEY, auth_provider=OAUTH_PROVIDER)
+```
+
+### 注册静态客户端（预置凭证）
+
+启用 OAuth 后，可注册静态客户端用于测试：
+
+```python
+from common.auth import register_static_client
+
+async def _init():
+    await register_static_client(
+        OAUTH_PROVIDER,
+        client_id="test_client",
+        client_secret="test_secret",
+    )
+```
+
+客户端通过 `client_credentials` 授权类型换取 token：
+
+```bash
+curl -X POST http://127.0.0.1:8907/.well-known/oauth/token \
+  -d "grant_type=client_credentials" \
+  -d "client_id=test_client" \
+  -d "client_secret=test_secret" \
+  -d "scope=mcp"
+```
+
+返回的 `access_token` 在后续 MCP 请求中通过 `Authorization: Bearer <token>` 携带，由 FastMCP 框架自动验证。
+
+### 工具使用记录
+
+所有工具调用完成后自动记录到 `mcp_tool_usage` 表（无需鉴权即可记录），包含：
+- 调用的工具名、参数摘要（敏感字段脱敏）
+- 执行结果（success / error）和错误信息
+- 执行耗时（毫秒）
+- 调用来源 IP
+
+该记录依赖 MySQL 数据库，需配置以下环境变量：
+
+| 变量 | 默认值 | 说明 |
+|---|---|---|
+| `MCP_DB_HOST` | `192.168.202.147` | MySQL 主机 |
+| `MCP_DB_PORT` | `3306` | MySQL 端口 |
+| `MCP_DB_USER` | `a_sh_hydc_liyaqi` | MySQL 用户 |
+| `MCP_DB_PASSWORD` | `DDDKhsfU@20260605` | MySQL 密码 |
+| `MCP_DB_NAME` | `a_sh_ods` | 数据库名 |
+| `MCP_AUTH_ENABLED` | `false` | 是否启用鉴权（`true` 启用，本地开发不设） |
+
 ## 安装与配置
 
 ```bash

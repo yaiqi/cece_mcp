@@ -1,12 +1,17 @@
 """创建 Entity MCP 各实体服务的共享配置与 FastMCP 实例。"""
 
 import os
+import time
+from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from functools import wraps
 
 from fastmcp import FastMCP
 from fastmcp.exceptions import ToolError
+from fastmcp.server.dependencies import get_http_request
 
+from common.auth import AuthInfo, log_tool_usage, validate_static_token
+from common.database import close_pool
 from common.output_shaping import _clean_output, shape_tool_output
 
 
@@ -83,15 +88,26 @@ def _instructions(service_key: str) -> str:
 """
 
 
+@asynccontextmanager
+async def _db_lifespan(server: FastMCP):
+    """FastMCP lifespan：服务关闭时关闭数据库连接池。"""
+    try:
+        yield {}
+    finally:
+        await close_pool()
+
+
 def create_mcp(service_key: str) -> FastMCP:
     """按服务标识创建 FastMCP 实例。
 
     host/port 等传输参数通过 get_transport_config 获取，调用方在 run 时传入。
+    内置 DB 连接池 lifespan，服务关闭时自动释放连接。
     """
     config = SERVICE_CONFIGS[service_key]
     return FastMCP(
         config.name,
         instructions=_instructions(service_key),
+        lifespan=_db_lifespan,
     )
 
 
@@ -121,19 +137,58 @@ def _is_error_result(result: dict) -> str | None:
     return None
 
 
+def _get_client_ip() -> str:
+    """从 HTTP 请求中提取客户端 IP，优先 X-Forwarded-For。"""
+    try:
+        request = get_http_request()
+        forwarded = request.headers.get("X-Forwarded-For", "")
+        if forwarded:
+            return forwarded.split(",")[0].strip()
+        return request.client.host if request.client else ""
+    except RuntimeError:
+        return ""
+
+
+_AUTH_ENABLED = os.getenv("MCP_AUTH_ENABLED", "").lower() in ("true", "1", "yes")
+
+
 def register_tools(mcp: FastMCP, tools: list) -> None:
     """注册工具并在 MCP 边界统一整形出参（替代手工 for 循环 add_tool）：
     信封清理、ID 剔除、英文键翻译、拍平（最多 3 层）、按工具功能筛选字段。
-    错误状态码自动转换为 MCP ToolExecutionError（isError=true）。"""
+    错误状态码自动转换为 MCP ToolExecutionError（isError=true）。
+
+    日志：每次工具调用完成后记录到 mcp_tool_usage 表。
+
+    鉴权：设置环境变量 MCP_AUTH_ENABLED=true 启用。启用后每次工具调用前
+    验证 Authorization: Bearer <token>，与 mcp_auth_tokens 表比对。
+    本地开发时不设该变量，跳过鉴权。"""
     for tool in tools:
 
         @wraps(tool)
         async def wrapper(*args, _tool=tool, **kwargs):
-            result = await _tool(*args, **kwargs)
-            if isinstance(result, dict):
-                err_msg = _is_error_result(result)
-                if err_msg:
-                    raise ToolError(err_msg)
-            return shape_tool_output(result, _tool.__name__)
+            tool_name = _tool.__name__
+            client_ip = _get_client_ip()
+
+            auth_info: AuthInfo | None = None
+            if _AUTH_ENABLED:
+                request = get_http_request()
+                auth_header = request.headers.get("Authorization", "")
+                auth_info = await validate_static_token(auth_header)
+
+            start = time.time()
+            try:
+                result = await _tool(*args, **kwargs)
+                duration_ms = int((time.time() - start) * 1000)
+                if isinstance(result, dict):
+                    err_msg = _is_error_result(result)
+                    if err_msg:
+                        raise ToolError(err_msg)
+                shaped = shape_tool_output(result, tool_name)
+                await log_tool_usage(auth_info, tool_name, kwargs, "success", duration_ms=duration_ms, client_ip=client_ip)
+                return shaped
+            except ToolError as e:
+                duration_ms = int((time.time() - start) * 1000)
+                await log_tool_usage(auth_info, tool_name, kwargs, "error", str(e), duration_ms, client_ip)
+                raise
 
         mcp.add_tool(wrapper)
