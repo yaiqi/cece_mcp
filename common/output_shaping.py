@@ -631,7 +631,7 @@ def _shape_person_beneficial(data):
             out["收益类型"] = bc
         bp = item.get("beneficialPercentStr") or ""
         if bp:
-            out["收益股份"] = bp
+            out["受益股份"] = bp
         person = item.get("名称") or ""
         if person:
             out["法定代表人"] = person
@@ -677,7 +677,7 @@ def _shape_person_controller(data):
             out["持股比例"] = pct
         bp = item.get("beneficialPercentStr") or ""
         if bp:
-            out["收益股份"] = bp
+            out["受益股份"] = bp
         person = item.get("名称") or ""
         if person:
             out["法定代表人"] = person
