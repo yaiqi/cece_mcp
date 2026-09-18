@@ -1,4 +1,70 @@
-﻿# MCP 工具接口文档（v2.0）
+﻿# MCP 工具接口文档（v2.1）
+
+## MCP 鉴权说明
+
+本服务支持基于 Token 的鉴权方式。启用鉴权后，每次工具调用需要在 HTTP Header 中传入有效的 Authorization Token。
+
+### 启用鉴权
+
+设置环境变量 `MCP_AUTH_ENABLED=true` 即可启用（默认不启用，本地开发可直接使用）。
+
+### 获取 Token
+
+通过管理后台（端口 8911）获取 Token：
+
+```bash
+# 1. 注册用户（如未注册）
+curl -s -X POST http://127.0.0.1:8911/register \
+  -H "Content-Type: application/json" \
+  -d '{"mobile":"13800138001","name":"张三","account":"zhangsan","company":"毅达资本"}'
+
+# 2. 创建 Token
+curl -s -X POST http://127.0.0.1:8911/create-token \
+  -H "Content-Type: application/json" \
+  -d '{"mobile":"13800138001","token_name":"开发测试"}'
+
+# 3. 查询已有 Token（明文不可逆，仅显示元信息）
+curl -s -X POST http://127.0.0.1:8911/query-tokens \
+  -H "Content-Type: application/json" \
+  -d '{"mobile":"13800138001"}'
+```
+
+### 调用方式
+
+在 MCP 客户端的 HTTP Header 中添加：
+
+```
+Authorization: Bearer <token>
+```
+
+示例（使用 curl）：
+
+```bash
+curl -s -X POST http://127.0.0.1:8907/cece-mcp-servers/PEVC/stream \
+  -H "Authorization: Bearer 894c98bebec8a0c03cba633a66d32d276e9c490a410dbcfd3cba832d175c2867" \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
+### 鉴权失败处理
+
+| 场景 | 返回 |
+|------|------|
+| 无 Authorization Header | `"未授权：缺少或无效的 Authorization Token。"` |
+| Token 不存在或已失效 | `"未授权：Token 不存在或已失效。"` |
+| Token 已禁用 | `"未授权：Token 已被禁用。"` |
+| Token 已过期 | `"未授权：Token 已过期。"` |
+
+---
+
+## MCP 错误规范
+
+工具执行错误通过 MCP 标准 `isError=true` 机制返回（非 JSON-RPC 协议级错误），LLM 可读取错误信息并自我修正。
+
+| 类型 | MCP 表示 | 适用场景 |
+|------|----------|----------|
+| **正常结果** | `isError=false` | 查询成功 / 唯一匹配 / 多候选 / 未匹配 |
+| **工具执行错误** | `isError=true` | 调用失败 / 查询无数据 / 实体未匹配 / 参数不合法 / 无权限 |
 
 ---
 
@@ -904,23 +970,7 @@
 
 ## Tool 27：resolve_person
 
-**功能描述**：识别人物姓名或 personNo，返回标准人物引用（person_no）。当人物名称有歧义时返回候选列表供用户确认。自动消歧策略：按名称模糊搜索人物，用关联企业数量的断层差距判断（第一名 companyAmount 至少是第二名的 5 倍才自动采用）。
-
-### 输入参数
-
-| 参数名称 | 参数中文名称 | 数据类型 | 是否必填 | 说明 |
-|----------|-------------|---------|---------|------|
-| query | 查询关键词 | str | 是 | 人物姓名或 32 位 MD5 格式的人物编号（personNo） |
-
-### 输出参数
-
-| 参数中文名称 | 数据类型 | 说明 |
-|-------------|---------|------|
-| 状态码 | str | 唯一匹配 / 多候选 / 未匹配 / 调用失败 |
-| 摘要 | str | 结果摘要文字 |
-| 检索关键字 | str | 原始查询关键字 |
-| 标准实体 | dict | 唯一匹配时存在，包含：person_no（人物编号） |
-| 候选列表 | list[dict] | 多候选时存在，每个元素包含：no（编号）、name（姓名）、company_amount（关联企业数）、partner_amount（合作伙伴数） |
+**功能描述**：已废弃。人物消歧功能已合并至 search_person_by_name，直接返回人物编号、名称、关联企业数等信息供调用方选择。
 
 ---
 

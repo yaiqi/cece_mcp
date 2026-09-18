@@ -224,6 +224,16 @@ python servers/person_insight_server.py
 python servers/entity_resolve_server.py
 ```
 
+### 管理后台
+
+提供用户注册、Token 创建与查询接口，独立端口运行：
+
+```bash
+python servers/admin_server.py
+```
+
+服务启动在 `http://0.0.0.0:8911`。
+
 ### 生产模式（一键启动 + Nginx）
 
 ```bash
