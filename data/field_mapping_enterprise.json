@@ -1,0 +1,1647 @@
+{
+    "CmpCompany-asyMain":
+    {
+        "API_description": "价值总分",
+        "dt": "评分日期",
+        "scoreVal": "价值评分",
+        "scoreLevel": "价值评分等级",
+        "rankRegionName": "区域名称",
+        "rankRegionVal": "区域排名",
+        "rankIndustryName": "行业名称",
+        "rankIndustryVal": "行业排名",
+        "rankAllVal": "全国排名",
+        "API_url": "/cmp/company-asy/main"
+    },
+    "CmpCompany-asyDetail":
+    {
+        "API_description": "价值评分细项",
+        "groups": "价值评分细项列表",
+        "dt": "评分日期",
+        "scoreVal": "评分",
+        "scoreLevel": "评分等级",
+        "rankRegionName": "区域名称",
+        "rankRegionVal": "区域排名",
+        "rankIndustryName": "行业名称",
+        "rankIndustryVal": "行业排名",
+        "rankAllVal": "全国排名",
+        "API_url": "/cmp/company-asy/detail"
+    },
+    "CmpCompany-asyMain-tech":
+    {
+        "API_description": "科创总分",
+        "dt": "评分日期",
+        "scoreVal": "科创评分",
+        "scoreLevel": "科创评分等级",
+        "rankRegionName": "区域名称",
+        "rankRegionVal": "区域排名",
+        "rankIndustryName": "行业名称",
+        "rankIndustryVal": "行业排名",
+        "rankAllVal": "全国排名",
+        "API_url": "/cmp/company-asy/main-tech"
+    },
+    "CmpCompany-asyDetail-tech":
+    {
+        "API_description": "科创总分细项",
+        "groups": "科创评分细项数据",
+        "dt": "评分日期",
+        "scoreVal": "评分",
+        "scoreLevel": "评分等级",
+        "rankRegionName": "区域名称",
+        "rankRegionVal": "区域排名",
+        "rankIndustryName": "行业名称",
+        "rankIndustryVal": "行业排名",
+        "rankAllVal": "全国排名",
+        "API_url": "/cmp/company-asy/detail-tech"
+    },
+    "CmpDetailMain":
+    {
+        "API_description": "企业标签资质信息",
+        "name": "企业名称",
+        "opscope": "经营范围",
+        "companyProfile": "企业简介",
+        "employeeCount": "人员规模",
+        "model": "企业规模",
+        "productClsNames": "标准产业名称",
+        "nseiClsNames": "国战新产业名称",
+        "featureClsNames": "特色产业名称",
+        "officeinfos": "高管信息",
+        "imageUrl": "企业logo图片地址",
+        "industryphy": "行业门类",
+        "industryphyName": "行业门类中文",
+        "gbValue": "企业负面态势指数",
+        "productInfo": "产品信息",
+        "competeProductInfo": "竞品信息",
+        "entPortrait": "主营业务",
+        "entValue": "企业综合价值评分",
+        "rankPercent": "评级",
+        "rankCode": "评级代码",
+        "rankRegion": "评级区域",
+        "industryPark": "所属园区",
+        "point": "注册地址经纬度",
+        "addressPoint": "经营地址经纬度",
+        "ipoSuccess": "上市成功标志",
+        "ipoInfos": "上市信息",
+        "bondInfos": "发债信息",
+        "roundInfos": "融资信息",
+        "techZzInfos": "科技资质",
+        "greenZzInfos": "绿色资质",
+        "topZzInfos": "荣誉榜单",
+        "stdInfos": "标准制定",
+        "groupInfo": "集团信息",
+        "parkInfos": "所属园区",
+        "comScore": "价值评分",
+        "biddingInfo": "招投标数量信息",
+        "techComScore": "科创评分",
+        "comEvent": "企业监控信息",
+        "rzPeRound": "融资轮次",
+        "typeNameChar": "企业类型中文名称",
+        "rzPeIpo": "上市进程",
+        "API_url": "/cmp/detail/main"
+    },
+    "CmpDetailMain-ipoInfos":
+    {
+        "secuCode": "上市代码",
+        "secuMarketCode": "市场代码",
+        "secuName": "上市简称",
+        "type": "市场类型"
+    },
+    "CmpDetailMain-bondInfos":
+    {
+        "type": "发债类型"
+    },
+    "CmpDetailMain-techZzInfos":
+    {
+        "type": "科技资质子类型"
+    },
+    "CmpDetailMain-greenZzInfos":
+    {
+        "type": "绿色资质子类型"
+    },
+    "CmpDetailMain-topZzInfos":
+    {
+        "type": "荣誉榜单子类型"
+    },
+    "CmpDetailMain-stdInfos":
+    {
+        "type": "标准制定子类型"
+    },
+    "CmpDetailMain-comScore":
+    {
+        "scoreVal": "价值评分得分"
+    },
+    "CmpDetailMain-techComScore":
+    {
+        "scoreVal": "科创评分得分"
+    },
+    "CmpDetailMain-groupInfo":
+    {
+        "groupName": "集团名称",
+        "groupNumber": "集团成员数"
+    },
+    "CmpDetailMain-parkInfos":
+    {
+        "parkName": "园区名称"
+    },
+    "CmpDetailBasic":
+    {
+        "API_description": "企业工商信息数据",
+        "name": "企业名称",
+        "creditCode": "统一社会信用代码",
+        "province": "省",
+        "city": "市",
+        "county": "区县",
+        "statusName": "经营状态",
+        "typeName": "企业类型",
+        "regNo": "工商注册号",
+        "regorgName": "登记机关",
+        "regcap": "注册资本",
+        "regcapName": "注册资本单位",
+        "recCap": "实缴资本",
+        "opscope": "经营范围",
+        "dom": "注册地址",
+        "legalPerson": "法人",
+        "opfrom": "经营期限自",
+        "opto": "经营期限至",
+        "esdate": "成立日期",
+        "apprdate": "核准日期",
+        "candate": "注销日期",
+        "revdate": "吊销日期",
+        "revcanRea": "注吊销原因",
+        "telphone": "联系电话",
+        "email": "公司邮箱",
+        "website": "公司网站",
+        "address": "经营地址",
+        "companyProfile": "企业简介",
+        "endoInsNum": "养老保险参保人数",
+        "industrycoName": "行业代码中文",
+        "industrycoCode": "行业代码",
+        "employeeCount": "人员规模",
+        "model": "企业规模",
+        "productClsNames": "标准产业名称",
+        "nseiClsNames": "国战新产业名称",
+        "featureClsNames": "特色产业名称",
+        "officeinfos": "高管信息",
+        "enName": "企业英文名",
+        "originalName": "企业曾用名",
+        "parkNames": "所属园区名称",
+        "taxpayerQualifi": "纳税人资格",
+        "parkInfos": "所属园区",
+        "industrycoChainName": "产业链名称",
+        "API_url": "/cmp/detail/basic"
+    },
+    "CmpHolderIpoPartner":
+    {
+        "API_description": "上市公告企业股东信息",
+        "holderName": "股东名称",
+        "type": "持股类型",
+        "holderType": "股东类型",
+        "publicDate": "报告日期",
+        "count": "持股数（万股）",
+        "changeCount": "较上期变动数（万股）",
+        "proportion": "持股比例",
+        "imageUrl": "股东企业logo图片地址",
+        "API_url": "/cmp/holder/ipo/partner"
+    },
+    "CmpHolderNormalPartner":
+    {
+        "API_description": "工商登记企业股东信息",
+        "stockName": "股东名称",
+        "stockType": "股东类型",
+        "stockPercent": "持股比例",
+        "shouldCapi": "认缴出资额",
+        "shouldCapiUnit": "认缴出资额单位",
+        "shouldDate": "认缴出资日期",
+        "companyName": "股东企业名称",
+        "status": "股东企业状态",
+        "imageUrl": "股东企业logo图片地址",
+        "API_url": "/cmp/holder/normal/partner"
+    },
+    "CmpEmployeeIpoList":
+    {
+        "API_description": "上市公告主要人员信息",
+        "officeinfos": "高管信息",
+        "stockPercent": "持股比例",
+        "dates": "变更日期",
+        "name": "姓名",
+        "sex": "性别",
+        "stock": "持股数（万股）",
+        "education": "学历",
+        "position": "职务",
+        "reward": "报酬",
+        "oldPosition": "原职务",
+        "API_url": "/cmp/employee/ipo/list"
+    },
+    "CmpEmployeeIpoList_officeinfos":
+    {
+        "companyName": "关联企业",
+        "name": "高管姓名",
+        "position": "关联企业的任职职位"
+    },
+    "CmpEmployeeNormalList":
+    {
+        "API_description": "工商登记主要人员信息",
+        "officeinfos": "高管信息",
+        "companyName": "企业名称",
+        "name": "姓名",
+        "job": "职务",
+        "dates": "变更日期",
+        "jobNum": "职务代码",
+        "API_url": "/cmp/employee/normal/list"
+    },
+    "CmpEmployeeNormalList_officeinfos":
+    {
+        "companyName": "关联企业",
+        "name": "高管姓名",
+        "position": "关联企业的任职职位"
+    },
+    "CmpOfficeinfoList":
+    {
+        "API_description": "董监高投资任职",
+        "companyName": "任职企业名称",
+        "name": "姓名",
+        "position": "所在职务",
+        "registCapi": "任职企业注册资本",
+        "registCapiUnit": "任职企业注册资本单位",
+        "esDate": "任职企业成立时间",
+        "operName": "任职企业法定代表人",
+        "status": "任职企业状态",
+        "API_url": "/cmp/officeinfo/list"
+    },
+    "CmpBranchList":
+    {
+        "API_description": "企业分支机构信息",
+        "total": "分支机构总数",
+        "datas":"部分分支机构信息",
+        "companyName": "企业名称",
+        "operName": "负责人姓名",
+        "address": "企业地址",
+        "startDate": "成立时间",
+        "status": "企业状态",
+        "imageUrl": "股东企业logo图片地址",
+        "officeinfos": "高管信息",
+        "API_url": "/cmp/branch/list"
+    },
+    "CmpBranchList_officeinfos":
+    {
+        "companyName": "关联企业",
+        "name": "高管姓名",
+        "position": "关联企业的任职职位"
+    },
+    "CmpCompanychangeList":
+    {
+        "API_description": "企业工商变更记录",
+        "total": "变更记录总数",
+        "datas": "部分记录",
+        "changeType": "变更类型",
+        "changeBefore": "变更前",
+        "changeAfter": "变更后",
+        "changeDate": "变更日期",
+        "API_url": "/cmp/companychange/list"
+    },
+    "CmpControlList":
+    {
+        "percent": "持股比例",
+        "tp": "类型",
+        "beneficialPercent": "受益股份",
+        "pkeyName": "实际控制人名称"
+    },
+    "CmpBeneficialList":
+    {
+        "beneficialPercent": "受益股份",
+        "tp": "受益类型",
+        "pkeyName": "受益所有人名称"
+    },
+    "cmpGraph-traceHolderP":
+    {
+        "API_description": "持股企业",
+        "total": "持股企业总数",
+        "datas": "部分记录",
+        "companyName": "持股企业",
+        "percent": "持股比例（%）",
+        "shortestLevel": "最短层级",
+        "esdate": "成立日期",
+        "regcap": "注册资本（万元 人民币）",
+        "legalPerson": "法定代表人",
+        "province": "地区-省",
+        "county": "地区-区",
+        "city": "地区-市",
+        "status": "经营状态",
+        "API_url": "/cmp/graph-trace/holder/p"
+    },
+    "CmpCompanynewsOpinionevent":
+    {
+        "API_description": "企业舆情",
+        "total":"数据总量",
+        "datas":"部分具体数据",
+        "title": "舆情标题",
+        "infoPublTime": "发布时间",
+        "sourceName": "来源",
+        "eventName": "事件类型",
+        "emotionDirection": "情绪类型",
+        "emotionImportance": "情感重要度",
+        "linkAddress": "原文链接",
+        "API_url": "/cmp/companynews/opinionevent"
+    },
+    "CmpCompanynewsAannouncement":
+    {
+        "API_description": "企业公告-A股",
+        "total":"数据总量",
+        "datas":"部分具体数据",
+        "stockCode": "证券代码",
+        "shareAbbr": "证券简称",
+        "infoTitle": "公告标题",
+        "infoPublDate": "发布日期",
+        "typeName": "公告类型",
+        "media": "来源",
+        "announcementLink": "原文链接",
+        "API_url": "/cmp/companynews/aannouncement"
+    },
+    "CmpCompanynewsHannouncement":
+    {
+        "API_description": "企业公告-H股",
+        "total":"数据总量",
+        "datas":"部分具体数据",
+        "stockCode": "证券代码",
+        "shareAbbr": "证券简称",
+        "infoTitle": "公告标题",
+        "infoPublDate": "发布日期",
+        "typeName": "公告类型",
+        "media": "来源",
+        "announcementLink": "原文链接",
+        "API_url": "/cmp/companynews/hannouncement"
+    },
+    "CmpCompanynewsNqannouncement":
+    {
+        "API_description": "企业公告-新三板",
+        "total":"数据总量",
+        "datas":"部分具体数据",
+        "stockCode": "证券代码",
+        "shareAbbr": "证券简称",
+        "infoTitle": "公告标题",
+        "infoPublDate": "发布日期",
+        "typeName": "公告类型",
+        "media": "来源",
+        "announcementLink": "原文链接",
+        "API_url": "/cmp/companynews/nqannouncement"
+    },
+    "CmpCompanynewsCompanyreport":
+    {
+        "API_description": "企业研报",
+        "total":"数据总量",
+        "datas":"部分具体数据",
+        "rpTitle": "研报标题",
+        "emratingName": "评级",
+        "publishDate": "发布日期",
+        "columnName": "研报类型",
+        "pubCompanyName": "分析机构",
+        "allPerson": "分析师",
+        "sourceURL": "原文链接",
+        "API_url": "/cmp/companynews/companyreport"
+    },
+    "CmpJudicialriskShixin":
+    {
+        "API_description": "失信被执行",
+        "yearList": "数据涉及的年份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "name": "企业名称",
+        "lianDate": "立案日期",
+        "anNo": "案号",
+        "orgNo": "企业统一社会信用代码",
+        "executeGov": "执行法院",
+        "executeUnite": "做出执行依据单位",
+        "yiwu": "生效法律文书确定的义务",
+        "executeStatus": "履行情况",
+        "actionRemark": "被执行人行为具体情形",
+        "publicDate": "发布日期",
+        "executeNo": "执行依据文号",
+        "API_url": "/cmp/judicialrisk/shixin"
+    },
+    "CmpJudicialriskZhixing":
+    {
+        "API_description": "被执行人",
+        "yearList": "数据涉及的年份",
+        "statusList": "数据涉及的状态",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "lianDate": "立案日期",
+        "anNo": "案号",
+        "executeGov": "执行法院",
+        "biaodi": "执行标的（万元）",
+        "status": "案件状态",
+        "API_url": "/cmp/judicialrisk/zhixing"
+    },
+    "CmpJudicialriskLimithighconsume":
+    {
+        "API_description": "限制高消费",
+        "yearList": "数据涉及的年份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "companyName": "企业名称",
+        "peopleEnforced": "限制人员",
+        "caseNumber": "案号",
+        "courtName": "执行法院",
+        "filingTime": "立案日期",
+        "infoPublDate": "发布日期",
+        "executeApplyName": "申请执行人",
+        "subjectMatter": "案由",
+        "linkAddress": "原文链接",
+        "content": "原文内容",
+        "API_url": "/cmp/judicialrisk/limithighconsume"
+    },
+    "CmpJudicialriskFinalcase":
+    {
+        "API_description": "终本案件",
+        "regYearsList": "数据涉及的立案年份",
+        "finalYearsList": "数据涉及的终本年份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "regDate": "立案日期",
+        "finalDate": "终本日期",
+        "caseNo": "案号",
+        "execMoney": "执行标的（万元）",
+        "unperfMoney": "未履行金额（万元）",
+        "courtName": "执行法院",
+        "API_url": "/cmp/judicialrisk/finalcase"
+    },
+    "CmpJudicialriskRegister":
+    {
+        "API_description": "立案信息",
+        "yearList": "数据涉及的年份",
+        "partyTypeList": "数据涉及的案件身份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "registDate": "立案日期",
+        "partyType": "案件身份",
+        "caseNo": "案号",
+        "caseType": "案件类型",
+        "reason": "案由",
+        "prosecutor": "原告",
+        "appellee": "被告",
+        "court": "法院",
+        "caseStatus": "案件状态",
+        "API_url": "/cmp/judicialrisk/register"
+    },
+    "CmpJudicialriskCourt":
+    {
+        "API_description": "法院公告",
+        "yearList": "数据涉及的年份",
+        "categoryList": "数据涉及的公告类型",
+        "partyTypeList": "数据涉及的案件身份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "publishDate": "公告日期",
+        "category": "公告类型",
+        "caseNo": "案号",
+        "partyType": "案件身份",
+        "prosecutorList": "原告（上诉人）",
+        "defendantList": "被告（被上诉人）",
+        "court": "公告法院",
+        "partyName": "当事人",
+        "publishPage": "刊登版面",
+        "content": "公告内容",
+        "API_url": "/cmp/judicialrisk/court"
+    },
+    "CmpJudicialriskCourtnotice":
+    {
+        "API_description": "开庭公告",
+        "yearList": "数据涉及的年份",
+        "categoryList": "数据涉及的公告类型",
+        "partyTypeList": "数据涉及的案件身份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "lianDate": "开庭日期",
+        "partyType": "案件身份",
+        "caseNo": "案号",
+        "caseReason": "案由",
+        "prosecutorList": "原告（上诉人）",
+        "defendantList": "被告（被上诉人）",
+        "partyName": "当事人",
+        "executeGov": "公告法院",
+        "executeUnite": "做出执行依据单位",
+        "scheduleTime": "排期日期",
+        "undertakeDepartment": "承办部门",
+        "chiefJudge": "审判长/主审人",
+        "API_url": "/cmp/judicialrisk/courtnotice"
+    },
+    "CmpJudicialriskJudgement":
+    {
+        "API_description": "裁判文书",
+        "yearList": "数据涉及的年份",
+        "partyTypeList": "数据涉及的案件身份",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "submitDate": "发布日期",
+        "caseName": "文书名称",
+        "caseNo": "案号",
+        "caseRole": "案件身份",
+        "caseReason": "案由",
+        "amount": "案件金额（万元）",
+        "caseType": "案件类型",
+        "court": "执行法院",
+        "courtLevel": "法院级别",
+        "prosecutor": "原告（上诉人）",
+        "defendant": "被告（被上诉人）",
+        "wenshuType": "文书类型",
+        "trialRound": "审理程序",
+        "judgeDate": "裁判日期",
+        "contentClear": "判决结果",
+        "API_url": "/cmp/judicialrisk/judgement"
+    },
+    "CmpJudicialriskAuction":
+    {
+        "API_description": "司法拍卖",
+        "yearList": "数据涉及的年份",
+        "auctionStatusList": "数据涉及的拍卖状态",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "companyName": "企业名称",
+        "auctionNotice": "拍卖公告标题",
+        "auctionStartTime": "拍卖开始日期",
+        "auctionEndTime": "拍卖结束日期",
+        "auctionItemName": "拍品名称",
+        "markType": "做出执行依据单位",
+        "salePrice": "起拍价额",
+        "appraisalPrice": "评估价",
+        "auctionStatus": "拍卖状态",
+        "courtName": "执行法院",
+        "turnoverPrice": "成交价格",
+        "tradingDate": "成交日期",
+        "API_url": "/cmp/judicialrisk/auction"
+    },
+    "CmpJudicialriskFreeze":
+    {
+        "API_description": "股权冻结",
+        "yearList": "数据涉及的年份",
+        "freezeStatusList": "数据涉及的冻结状态",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "executionNoticeNum": "执行通知书文号",
+        "executedBy": "被执行人",
+        "companyName": "冻结股权标的企业",
+        "equityAmount": "股权数额",
+        "status": "冻结状态",
+        "enforcementCourt": "执行法院",
+        "publicDate": "公示日期",
+        "freezeStartDate": "冻结期限自",
+        "freezeEndDate": "冻结期限至",
+        "API_url": "/cmp/judicialrisk/freeze"
+    },
+    "CmpJudicialriskReorg":
+    {
+        "API_description": "破产重整",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "publishTime": "发布日期",
+        "caseNo": "案号",
+        "caseType": "案件类型",
+        "applicant": "申请人",
+        "court": "经办法院",
+        "API_url": "/cmp/judicialrisk/reorg"
+    },
+    "FinanceJourney":
+    {
+        "API_description": "融资历程",
+        "amount": "总计融资额（万元）",
+        "ventureAmount": "创投融资额（万元）",
+        "stockAmount": "股票融资额（万元）",
+        "bondAmount": "债券融资额（万元）",
+        "stockAmount": "股票融资额（万元）",
+        "otherAmount": "其他融资额（万元）",
+        "financeJourneys": "融资历程",
+        "API_url": "finance/journey"
+    },
+    "FinanceJourney-financeJourneys":
+    {
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "融资日期",
+        "type1": "融资类型",
+        "type2": "融资类型细分"
+    },
+    "FinanceQuery_1":
+    {
+        "API_description": "创投融资",
+        "totalCount":"创投融资总次数",
+        "list": "部分融资信息",
+        "investorItems": "投资方",
+        "company": "投资企业名称",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "融资日期",
+        "shareRatio": "投资持股比例（%）",
+        "originalType": "融资轮次",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_2":
+    {
+        "API_description": "股票融资",
+        "totalCount":"创投融资总次数",
+        "list": "部分融资信息",
+        "type2": "融资分类",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "发行日期",
+        "secuAbbr": "股票简称",
+        "secuCode": "股票代码",
+        "issuePrice": "发行价格（元）",
+        "issueVol": "发行量（万股）",
+        "status": "状态",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_3":
+    {
+        "API_description": "债券融资",
+        "totalCount":"债券融资总次数",
+        "list": "部分融资信息",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "发行日期",
+        "rate": "票面利率（%）",
+        "endDate": "到期日期",
+        "maturity": "债券期限（年）",
+        "secuAbbr": "债券简称",
+        "secuCode": "债券代码",
+        "bondNature": "债券类型",
+        "creditRating": "债券评级",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_4":
+    {
+        "API_description": "应收账款融资",
+        "totalCount":"应收账款融资总次数",
+        "list": "部分融资信息",
+        "investorItems": "质权人/受让人",
+        "company": "企业名称",
+        "type2": "融资类型",
+        "amountCny": "融资金额（万元 人民币）",
+        "propertyValueCny": "质让/转让财产价值（万元 人民币）",
+        "financeDate": "起始日期",
+        "publishDate": "披露日期",
+        "endDate": "截至日期",
+        "maturity": "期限（年）",
+        "recordType": "登记状态",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_5":
+    {
+        "API_description": "租赁融资",
+        "totalCount":"租赁融资总次数",
+        "list": "部分融资信息",
+        "investorItems": "出租人",
+        "company": "企业名称",
+        "type2": "租赁类型",
+        "amountCny": "融资金额（万元 人民币）",
+        "propertyValueCny": "产权价值（人民币）",
+        "financeDate": "起始日期",
+        "rate": "利率",
+        "publishDate": "公告日期",
+        "endDate": "截至日期",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_6":
+    {
+        "API_description": "信托融资",
+        "totalCount":"信托融资总次数",
+        "list": "部分融资信息",
+        "investorItems": "信托公司",
+        "guarantorItems": "担保人",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "起始日期",
+        "publishDate": "披露日期",
+        "endDate": "截至日期",
+        "maturity": "期限（年）",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_6-investorItems":
+    {
+        "company": "企业名称"
+    },
+    "FinanceQuery_6-guarantorItems":
+    {
+        "company": "担保人名称"
+    },
+    "FinanceQuery_7":
+    {
+        "API_description": "银行借款",
+        "totalCount":"银行借款总次数",
+        "list": "部分融资信息",
+        "investorItems": "银行",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "起始日期",
+        "rate": "利率（%）",
+        "publishDate": "披露日期",
+        "endDate": "截至日期",
+        "maturity": "期限（年）",
+        "fileLink": "消息来源",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_7-investorItems":
+    {
+        "company": "银行名称"
+    },
+    "FinanceQuery_8":
+    {
+        "API_description": "其他融资",
+        "totalCount":"其他融资总次数",
+        "list": "部分融资信息",
+        "investorItems": "债权人",
+        "type2": "融资类型",
+        "amountCny": "融资金额（万元 人民币）",
+        "financeDate": "起始日期",
+        "rate": "利率（%）",
+        "publishDate": "披露日期",
+        "endDate": "到期日期",
+        "maturity": "期限（年）",
+        "API_url": "finance/query"
+    },
+    "FinanceQuery_8-investorItems":
+    {
+        "company": "企业名称"
+    },
+    "FinanceCreditline":
+    {
+        "API_description": "授信额度",
+        "totalCount": "授信额度总次数",
+        "list":"部分授信额度信息",
+        "publishDate": "披露日期",
+        "endDate": "截止日期",
+        "totalCreditLine": "授信额度（万元 人民币）",
+        "usedQuota": "已使用额度（万元 人民币）",
+        "unusedQuota": "未使用额度（万元 人民币）",
+        "signCreditBankNum": "授信家数",
+        "details": "具体授信信息",
+        "companyName": "授信机构",
+        "creditLine": "授信额度（万元 人民币）",
+        "usedQuota": "已使用（万元 人民币）",
+        "unusedQuota": "未使用（万元 人民币）",
+        "API_url": "finance/creditLine"
+    },
+    "FinanceOutinvestment":
+    {
+        "API_description": "对外投资",
+        "totalCount": "对外投资总次数",
+        "endIndex": "展示数量",
+        "list": "部分对外投资信息",
+        "companyName": "企业名称",
+        "stockPercentNum": "持股比例（%）",
+        "registCapi": "注册资本（万元 人民币）",
+        "operName": "法定代表人",
+        "startDate": "成立日期",
+        "status": "企业状态",
+        "API_url": "finance/outInvestment"
+    },
+    "FinanceHolder":
+    {
+        "API_description": "债券持有人",
+        "totalCount": "债券持有人总数",
+        "list": "部分债券持有人信息",
+        "reportDate": "报告期",
+        "bondAbbr": "债券简称",
+        "bondCode": "债券代码",
+        "holder": "持有人",
+        "amount": "持仓市值（万元）",
+        "amountChange": "较上期变化（万元）",
+        "amountChangeType": "变化类型",
+        "holdVolume": "持仓数量（张）",
+        "fundComName": "管理人",
+        "API_url": "finance/holder"
+    },
+    "CmpDetailintellectualSoftwarecopyright":
+    {
+        "API_description": "软件著作权",
+        "companyName": "企业名称",
+        "registerDate": "登记日期",
+        "fullName": "软件全称",
+        "shortName": "软件简称",
+        "version": "版本号",
+        "registerNo": "登记号",
+        "publishDate": "首次发布日期",
+        "companyPortrait": "主营业务",
+        "API_url": "/cmp/detailIntellectual/softwareCopyright"
+    },
+    "CmpDetailintellectualWorkcopyright":
+    {
+        "API_description": "作品著作权",
+        "companyName": "企业名称",
+        "registerDate": "登记日期",
+        "name": "作品名称",
+        "category": "作品类型",
+        "registerNo": "登记号",
+        "finishDate": "创作完成日期",
+        "publishDate": "首次发表日期",
+        "companyPortrait": "主营业务",
+        "API_url": "/cmp/detailIntellectual/workCopyright"
+    },
+    "CmpDetailintellectualTrademark":
+    {
+        "API_description": "商标信息",
+        "companyName": "企业名称",
+        "registerDate": "注册公告日期",
+        "applyDate": "申请日期",
+        "imageUrl": "商标logo地址",
+        "name": "商标名称",
+        "registerNo": "注册号",
+        "category": "国际分类代码",
+        "categoryDescription": "国际分类描述",
+        "status": "是否有效",
+        "flowStatus": "商标状态",
+        "companyPortrait": "主营业务",
+        "API_url": "/cmp/detailIntellectual/trademark"
+    },
+    "CmpDetailintellectualWebsiterecord":
+    {
+        "API_description": "网站备案",
+        "companyName": "企业名称",
+        "name": "网址名称",
+        "url": "网址",
+        "domain": "域名",
+        "licenseNo": "许可证号",
+        "API_url": "/cmp/detailIntellectual/websiteRecord"
+    },
+    "CmpDetailIntellectualPatent":
+    {
+        "API_description": "专利信息",
+        "companyName": "企业名称",
+        "applicationDate": "申请日期",
+        "name": "专利名称",
+        "type": "专利类型",
+        "legalStatus": "法律状态",
+        "applicationNumber": "申请号",
+        "publicationNumber": "公开号",
+        "publicationDate": "公告日期",
+        "inventor": "发明人",
+        "API_url": "/cmp/detailIntellectual/patent/findPage"
+    },
+    "CmpDetailProductinfo":
+    {
+        "API_description": "产品服务",
+        "logo": "商标图片地址",
+        "brief": "产品服务",
+        "intro": "介绍",
+        "API_url": "/cmp/detail/productInfo"
+    },
+    "CmpDetailoperationBondcomcredit":
+    {
+        "API_description": "债券主体评级",
+        "creditCode": "统一社会信用代码",
+        "companyName": "企业名称",
+        "grade": "评级",
+        "gradeType": "评级类型",
+        "gradeDate": "评级日期",
+        "gradeAgency": "评级机构",
+        "gradeProspect": "展望",
+        "API_url": "/cmp/detailOperation/bondComCredit"
+    },
+    "CmpDetailoperationImportexportcredit":
+    {
+        "API_description": "进出口信用评级",
+        "companyName": "企业名称",
+        "customsCreditLevel": "海关信用等级",
+        "customsRegisterDate": "海关注册日期",
+        "customsRegisterName": "注册海关名称",
+        "economicZone": "经济区划",
+        "businessCategory": "经营类别",
+        "publicIndustryCategory": "公示行业种类",
+        "customsCancellationStatus": "海关注销标志",
+        "API_url": "/cmp/detailOperation/importExportCredit"
+    },
+    "CmpDetailoperationTaxcredit":
+    {
+        "API_description": "税务评级",
+        "companyName": "企业名称",
+        "taxNo": "纳税人识别号",
+        "level": "纳税等级",
+        "year": "年份",
+        "publishTime": "公布日期",
+        "API_url": "/cmp/detailOperation/taxCredit"
+    },
+    "CmpDetailoperationWintenderer":
+    {
+        "API_description": "企业招标项目",
+        "totalCount":"招标数据总量",
+        "list":"部分具体数据",
+        "tendereePageTime": "招标公告日期",
+        "winTendererPageTime": "招标公告日期",
+        "noticeType": "招标类型",
+        "projectArea": "招标项目地区",
+        "projectName": "招标项目名称",
+        "projectType": "招标项目类型",
+        "tendereeCompanyName": "招标方企业名称",
+        "tendereeCreditCode": "招标方企业统一社会信用代码",
+        "winTendererCompanyName": "中标方企业名称",
+        "winTendererCreditCode": "中标方企业统一社会信用代码",
+        "biddingBudget": "招标金额",
+        "winBidPrice": "中标金额",
+        "product": "采购产品",
+        "region": "区域",
+        "API_url": "/cmp/detailOperation/winTenderer"
+    },
+    "CmpDetailoperationTenderee":
+    {
+        "API_description": "企业投标项目",
+        "totalCount":"投标数据总量",
+        "list":"部分具体数据",
+        "tendereePageTime": "投标公告日期",
+        "winTendererPageTime": "投标公告日期",
+        "noticeType": "投标类型",
+        "projectArea": "投标项目地区",
+        "projectName": "投标项目名称",
+        "projectType": "投标项目类型",
+        "tendereeCompanyName": "招标方企业名称",
+        "tendereeCreditCode": "招标方企业统一社会信用代码",
+        "winTendererCompanyName": "中标方企业名称",
+        "winTendererCreditCode": "中标方企业统一社会信用代码",
+        "biddingBudget": "招标金额",
+        "winBidPrice": "中标金额",
+        "product": "采购产品",
+        "region": "区域",
+        "API_url": "/cmp/detailOperation/tenderee"
+    },
+    "CmpDetailoperationSupplier":
+    {
+        "API_description": "供应商",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "source": "数据来源",
+        "supplierName": "供应商名称",
+        "supplierCreditCode": "供应商统一社会信用代码",
+        "supplierStatus": "供应商状态",
+        "customerName": "客户名称",
+        "customerCreditCode": "客户统一社会信用代码",
+        "customerStatus": "客户状态",
+        "tradeAmount": "采购金额（万元）",
+        "reportTime": "报告期",
+        "imageUrl": "供应商logo地址",
+        "API_url": "/cmp/detailOperation/supplier"
+    },
+    "CmpDetailoperationCustomer":
+    {
+        "API_description": "客户",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "source": "数据来源",
+        "supplierName": "供应商名称",
+        "supplierCreditCode": "供应商统一社会信用代码",
+        "supplierStatus": "供应商状态",
+        "customerName": "客户名称",
+        "customerCreditCode": "客户统一社会信用代码",
+        "customerStatus": "客户状态",
+        "tradeAmount": "采购金额（万元）",
+        "reportTime": "报告期",
+        "imageUrl": "客户logo地址",
+        "API_url": "/cmp/detailOperation/customer"
+    },
+    "CmpDetailoperationRecruit":
+    {
+        "API_description": "招聘信息",
+        "publishTime": "公告日期",
+        "title": "招聘职位",
+        "salary": "月薪",
+        "education": "学历",
+        "experience": "经验",
+        "area": "办公地点",
+        "description": "工作描述",
+        "API_url": "/cmp/detailOperation/recruit"
+    },
+    "CmpAipluginFinanceindex":
+    {
+        "API_description": "财务指标",
+        "Earnings per Share - Basic (yuan)": "每股收益 - 基本 (元)",
+        "Earnings per Share - Diluted (yuan)": "每股收益 - 稀释 (元)",
+        "Earnings per Share - Excluding Extraordinary Items / Basic (yuan)": "每股收益 - 扣除 / 基本 (元)",
+        "Earnings per Share - Excluding Extraordinary Items / Diluted (yuan)": "每股收益 - 扣除 / 稀释 (元)",
+        "Earnings per Share - Diluted by Ending Share Capital (yuan)": "每股收益 - 期末股本摊薄 (元)",
+        "Book Value per Share (BPS) (yuan)": "每股净资产 BPS (元)",
+        "Revenue per Share (yuan)": "每股营业收入 (元)",
+        "Net Cash Flow from Operating Activities per Share (yuan)": "每股经营活动产生的现金流量净额 (元)",
+        "Net Cash Flow per Share (yuan)": "每股现金流量净额 (元)",
+        "Return on Equity (Diluted) (%)": "净资产收益率 (摊薄)(%)",
+        "Return on Equity (Diluted - Excluding Extraordinary Items) (%)": "净资产收益率 (摊薄 - 扣除)(%)",
+        "Return on Equity (Weighted) (%)": "净资产收益率 (加权)(%)",
+        "Return on Equity (Weighted - Excluding Extraordinary Items) (%)": "净资产收益率 (加权 - 扣除)(%)",
+        "Return on Total Assets Net Profit Margin (%)": "总资产净利率 (%)",
+        "Return on Invested Capital (ROIC) (%)": "投入资本回报率 ROIC (%)",
+        "Gross Profit Margin (%)": "销售毛利率 (%)",
+        "Net Profit Margin (%)": "销售净利率 (%)",
+        "Return on Total Assets (%)": "总资产报酬率 (%)",
+        "EBITDA Margin (%)": "EBITDAMargin(%)",
+        "Debt - to - Asset Ratio (%)": "资产负债率 (%)",
+        "Total Asset Turnover (times)": "总资产周转率 (次)",
+        "Cash Received from the Sale of Goods and Provision of Services / Revenue (%)": "销售商品、提供劳务收到的现金 / 营业收入 (%)",
+        "Year - on - Year Growth Rate of Revenue (%)": "营业收入同比增长率 (%)",
+        "Year - on - Year Growth Rate of Operating Profit (%)": "营业利润同比增长率 (%)",
+        "Year - on - Year Growth Rate of Net Profit Attributable to Shareholders of the Parent Company (%)": "归属母公司股东的净利润同比增长率 (%)",
+        "Total Operating Revenue (ten thousand yuan)": "营业总收入 (万元)",
+        "Total Operating Costs (ten thousand yuan)": "营业总成本 (万元)",
+        "Revenue (ten thousand yuan)": "营业收入 (万元)",
+        "Operating Profit (ten thousand yuan)": "营业利润 (万元)",
+        "Total Profit (ten thousand yuan)": "利润总额 (万元)",
+        "Net Profit (ten thousand yuan)": "净利润 (万元)",
+        "Net Profit Attributable to Shareholders of the Parent Company (ten thousand yuan)": "归属母公司股东的净利润 (万元)",
+        "Non - recurring Gains and Losses (ten thousand yuan)": "非经常性损益 (万元)",
+        "Net Profit after Deducting Non - recurring Gains and Losses (ten thousand yuan)": "扣除非经常性损益后的净利润 (万元)",
+        "Research and Development Expenses (ten thousand yuan)": "研发费用 (万元)",
+        "Earnings Before Interest and Taxes (EBIT) (calculated) (ten thousand yuan)": "息税前利润 EBIT (计算)(万元)",
+        "Earnings Before Interest, Taxes, Depreciation and Amortization (EBITDA) (calculated) (ten thousand yuan)": "息税折旧摊销前利润 EBITDA (计算)(万元)",
+        "Current Assets (ten thousand yuan)": "流动资产 (万元)",
+        "Fixed Assets (ten thousand yuan)": "固定资产 (万元)",
+        "Long - term Equity Investments (ten thousand yuan)": "长期股权投资 (万元)",
+        "Total Assets (ten thousand yuan)": "资产总计 (万元)",
+        "Current Liabilities (ten thousand yuan)": "流动负债 (万元)",
+        "Non - current Liabilities (ten thousand yuan)": "非流动负债 (万元)",
+        "Total Liabilities (ten thousand yuan)": "负债合计 (万元)",
+        "Capital Reserve (ten thousand yuan)": "资本公积 (万元)",
+        "Surplus Reserve (ten thousand yuan)": "盈余公积 (万元)",
+        "Undistributed Profits (ten thousand yuan)": "未分配利润 (万元)",
+        "Shareholders' Equity (ten thousand yuan)": "股东权益 (万元)",
+        "Shareholders' Equity Attributable to Shareholders of the Parent Company (ten thousand yuan)": "归属母公司股东的权益 (万元)",
+        "Cash Received from the Sale of Goods and Provision of Services (ten thousand yuan)": "销售商品、提供劳务收到的现金 (万元)",
+        "Net Cash Flow from Operating Activities (ten thousand yuan)": "经营活动产生的现金流量 (万元)",
+        "Cash Paid for the Acquisition of Fixed Assets, Intangible Assets and Other Long - term Assets (ten thousand yuan)": "购建固定资产、无形资产和其他长期资产支付的现金 (万元)",
+        "Cash Paid for Investments (ten thousand yuan)": "投资支付的现金 (万元)",
+        "Net Cash Flow from Investing Activities (ten thousand yuan)": "投资活动产生的现金流量 (万元)",
+        "Cash Received from Investment (ten thousand yuan)": "吸收投资收到的现金 (万元)",
+        "Cash Received from Borrowings (ten thousand yuan)": "取得借款收到的现金 (万元)",
+        "Net Cash Flow from Financing Activities (ten thousand yuan)": "筹资活动产生的现金流量 (万元)",
+        "Net Increase in Cash and Cash Equivalents (ten thousand yuan)": "现金及现金等价物净增加 (万元)",
+        "Ending Balance of Cash and Cash Equivalents (ten thousand yuan)": "期末现金及现金等价物余额 (万元)",
+        "Depreciation and Amortization (ten thousand yuan)": "折旧与摊销 (万元)",
+        "type": "报表类型",
+        "time": "报告期",
+        "stage": "报表时间描述",
+        "API_url": "/cmp/aiplugin/financeindex"
+    },
+    "CmpAipluginBalancesheet":
+    {
+        "API_description": "资产负债表",
+        "cashequivalents": " 货币资金(万元)",
+        "tradingassets": "交易性金融资产(万元)",
+        "billaccreceivable": "应收票据及应收账款(万元)",
+        "billreceivable": "应收票据(万元)",
+        "accountreceivable": "应收账款(万元)",
+        "otherreceivableed": "其他应收款(含利息和股利)(万元)",
+        "otherreceivable": "其他应收款(万元)",
+        "advancepayment": "预付款项(万元)",
+        "inventories": "存货(万元)",
+        "noncurrentassetin1year": "一年内到期的非流动资产(万元)",
+        "othercurrentassets": "其他流动资产(万元)",
+        "totalcurrentassets": "流动资产合计(万元)",
+        "debtinvestment": "债权投资(万元)",
+        "othnoncurfinassets": "其他非流动金融资产(万元)",
+        "investmentproperty": "投资性房地产(万元)",
+        "totalfixedasset": "固定资产合计(万元)",
+        "fixedassets": "固定资产(万元)",
+        "tconstruinprocess": "在建工程合计(万元)",
+        "construinprocess": "在建工程(万元)",
+        "intangibleassets": "无形资产(万元)",
+        "developmentexpenditure": "开发支出(万元)",
+        "usufructassets": "使用权资产(万元)",
+        "longdeferredexpense": "长期待摊费用(万元)",
+        "deferredtaxassets": "递延所得税资产(万元)",
+        "othernoncurrentassets": "其他非流动资产(万元)",
+        "totalnoncurrentassets": "非流动资产合计(万元)",
+        "lendcapital": "拆出资金(万元)",
+        "boughtsellbackassets": "买入返售金融资产(万元)",
+        "loanandadvance": "发放贷款和垫款(万元)",
+        "totalassets": "资产总计(万元)",
+        "notaccountspayable": "应付票据及应付账款(万元)",
+        "accountspayable": "应付账款(万元)",
+        "contractliability": "合同负债(万元)",
+        "salariespayable": "应付职工薪酬(万元)",
+        "taxspayable": "应交税费(万元)",
+        "otherpayableed": "其他应付款(含利息和股利)(万元)",
+        "otherpayable": "其他应付款(万元)",
+        "dividendpayable": "应付股利(万元)",
+        "noncurrentliabilityin1year": "一年内到期的非流动负债(万元)",
+        "othercurrentliability": "其他流动负债(万元)",
+        "totalcurrentliability": "流动负债合计(万元)",
+        "deferredtaxliability": "递延所得税负债(万元)",
+        "leaseliabilities": "租赁负债(万元)",
+        "totalnoncurrentliability": "非流动负债合计(万元)",
+        "absinterdeposits": "吸收存款及同业存款(万元)",
+        "totalliability": "负债合计(万元)",
+        "paidincapital": "实收资本(或股本)(万元)",
+        "capitalreservefund": "资本公积(万元)",
+        "surplusreservefund": "盈余公积(万元)",
+        "retainedprofit": "未分配利润(万元)",
+        "othercompositeincome": "其他综合收益(万元)",
+        "ordinaryriskreservefund": "一般风险准备(万元)",
+        "sewithoutmi": "归属母公司股东权益合计(万元)",
+        "minorityinterests": "少数股东权益(万元)",
+        "totalshareholderequity": "所有者权益(或股东权益)合计(万元)",
+        "totalliabilityandequity": "负债和所有者(或股东权益)总计(万元)",
+        "auditopinion": "审计意见",
+        "enddate": "报告期",
+        "companytype": "报表格式",
+        "API_url": "/cmp/aiplugin/balancesheet"
+    },
+    "CmpAipluginProfit":
+    {
+        "API_description": "利润表",
+        "totaloperatingrevenue": "营业总收入(万元)",
+        "operatingrevenue": "营业收入(万元)",
+        "netinterestincome": "利息净收入(万元)",
+        "interestincome": "其中:利息收入(财务费用)(万元)",
+        "interestexpense": "其中:利息支出(万元)",
+        "commissionexpense": "手续费及佣金支出(万元)",
+        "specialitemsor": "##营业收入OR营业总收入特殊项目(万元)",
+        "totaloperatingcost": "营业总成本(万元)",
+        "operatingcost": "营业成本(万元)",
+        "operatingtaxsurcharges": "营业税金及附加(万元)",
+        "operatingexpense": "销售费用(万元)",
+        "administrationexpense": "管理费用(万元)",
+        "financialexpense": "财务费用(万元)",
+        "interestfinexp": "其中:利息费用(财务费用)(万元)",
+        "randd": " 研发费用(万元)",
+        "specialitemstoc": "##营业支出OR营业总成本特殊项目(万元)",
+        "othernetrevenue": "非经营性净收益(万元)",
+        "fairvaluechangeincome": "公允价值变动净收益(万元)",
+        "investincome": "投资净收益(万元)",
+        "assetdealincome": "资产处置收益(万元)",
+        "otherrevenue": "其他收益(万元)",
+        "operatingprofit": "营业利润(万元)",
+        "nonoperatingincome": "加:营业外收入(万元)",
+        "nonoperatingexpense": "减:营业外支出(万元)",
+        "totalprofit": "利润总额(万元)",
+        "incometaxcost": "减:所得税费用(万元)",
+        "adjusteditemseffectingnp": "加:##影响净利润的调整项目(万元)",
+        "netprofit": "净利润(万元)",
+        "opersustnetp": " 持续经营净利润(万元)",
+        "npparentcompanyowners": " 归属于母公司所有者的净利润(万元)",
+        "ciminorityowners": "归属于少数股东的综合收益总额(万元)",
+        "othercompositeincome": "其他综合收益(万元)",
+        "ociparentcompanyowners": "归属于母公司所有者的其他综合收益总额(万元)",
+        "ociinincomestatement": "以后能重分类进损益表的其他综合收益(万元)",
+        "ociforeigncurrencyfsa": "外币财务报表分析折算差额(万元)",
+        "totalcompositeincome": "综合收益总额(万元)",
+        "ciparentcompanyowners": "归属于母公司所有者的综合收益总额(万元)",
+        "basiceps": "基本每股收益(元)",
+        "dilutedeps": "稀释每股收益(元)",
+        "auditopinion": "审计意见",
+        "enddate": "报告期",
+        "companytype": "报表格式",
+        "API_url": "/cmp/aiplugin/profit"
+    },
+    "CmpAipluginCashflow":
+    {
+        "API_description": "现金流量表",
+        "goodssaleservicerendercash": "销售商品、提供劳务收到的现金(万元)",
+        "taxlevyrefund": "收到的税费返还(万元)",
+        "netdepositincrease": "客户存款和同业存放款项净增加额(万元)",
+        "interestandcommissioncashin": "收取利息、手续费及佣金的现金(万元)",
+        "othercashinrelatedoperate": "收到其他与经营活动有关的现金(万元)",
+        "subtotaloperatecashinflow": "经营活动现金流入小计(万元)",
+        "goodsservicescashpaid": "购买商品、接受劳务支付的现金(万元)",
+        "staffbehalfpaid": "支付给职工以及为职工支付的现金(万元)",
+        "alltaxespaid": "支付的各项税费(万元)",
+        "netloanandadvanceincrease": "客户贷款及垫款净增加额(万元)",
+        "netdepositincbandib": "存放中央银行和同业款项净增加额(万元)",
+        "netlendcapital": "拆出资金净增加额(万元)",
+        "commissioncashpaid": "支付手续费及佣金的现金(万元)",
+        "otheroperatecashpaid": "支付其他与经营活动有关的现金(万元)",
+        "subtotaloperatecashoutflow": "经营活动现金流出小计(万元)",
+        "netoperatecashflow": "(附注)经营活动产生的现金流量净额(万元)",
+        "investwithdrawalcash": "收回投资收到的现金(万元)",
+        "investproceeds": "取得投资收益收到的现金(万元)",
+        "fixintanotherassetdispocash": "处置固定资产、无形资产和其他长期资产收回的现金净额(万元)",
+        "othercashfrominvestact": "收到其他与投资活动有关的现金(万元)",
+        "subtotalinvestcashinflow": "投资活动现金流入小计(万元)",
+        "fixintanotherassetacquicash": "购建固定资产、无形资产和其他长期资产支付的现金(万元)",
+        "investcashpaid": "投资支付的现金(万元)",
+        "othercashtoinvestact": "支付其他与投资活动有关的现金(万元)",
+        "subtotalinvestcashoutflow": "投资活动现金流出小计(万元)",
+        "netinvestcashflow": "投资活动产生的现金流量净额(万元)",
+        "dividendinterestpayment": "分配股利、利润或偿付利息支付的现金(万元)",
+        "proceedsfromsubtominos": "其中:子公司支付给少数股东的股利、利润或偿付的利息(万元)",
+        "otherfinanceactpayment": "支付其他与筹资活动有关的现金(万元)",
+        "subtotalfinancecashoutflow": "筹资活动现金流出小计(万元)",
+        "netfinancecashflow": "筹资活动产生的现金流量净额(万元)",
+        "exchanratechangeeffect": "汇率变动对现金及现金等价物的影响(万元)",
+        "cashequivalentincrease": "(附注)现金及现金等价物净增加额(万元)",
+        "beginperiodcash": "加:期初现金及现金等价物余额(万元)",
+        "endperiodcashequivalent": "期末现金及现金等价物余额(万元)",
+        "netprofit": "净利润(万元)",
+        "fixedassetdepreciation": "固定资产折旧(万元)",
+        "intangibleassetamortization": "无形资产摊销(万元)",
+        "deferredexpenseamort": "长期待摊费用摊销(万元)",
+        "fixintanotherassetdispoloss": "处置固定资产、无形资产和其他长期资产的损失(万元)",
+        "fixedassetscraploss": "固定资产报废损失(万元)",
+        "lossfromfairvaluechanges": "公允价值变动损失(万元)",
+        "financialexpense": "财务费用(万元)",
+        "investloss": "投资损失(万元)",
+        "creditimpairmentl": "信用减值损失(万元)",
+        "deferedtaxassetdecrease": "递延所得税资产减少(万元)",
+        "deferedtaxliabilityincrease": "递延所得税负债增加(万元)",
+        "inventorydecrease": "存货的减少(万元)",
+        "operatereceivabledecrease": "经营性应收项目的减少(万元)",
+        "operatepayableincrease": "经营性应付项目的增加(万元)",
+        "cashatendofyear": "现金的期末余额(万元)",
+        "cashatbeginningofyear": "减:现金的期初余额(万元)",
+        "cashequivalentsatendofyear": "加:现金等价物的期末余额(万元)",
+        "cashequivalentsatbeginning": "减:现金等价物的期初余额(万元)",
+        "auditopinion": "审计意见",
+        "enddate": "报告期",
+        "companytype": "报表格式",
+        "API_url": "/cmp/aiplugin/cashflow"
+    },
+    "CmpRiskPenaltyList":
+    {
+        "API_description": "行政处罚",
+        "publicDate": "发布日期",
+        "penaltyDate": "处罚日期",
+        "docNo": "决定文书号",
+        "penaltyType": "违法行为分类",
+        "content": "处罚内容",
+        "penaltyAmount": "处罚金额（万元）",
+        "penaltyAmountStr": "处罚金额中文",
+        "officeName": "处罚决定机关",
+        "API_url": "/cmp/risk/penalty/list"
+    },
+    "CmpRiskOperateexceptionList":
+    {
+        "API_description": "经营异常",
+        "addDate": "列入日期",
+        "removeDate": "移出日期",
+        "addReason": "列入经营异常名录原因",
+        "decisionOffice": "列入决定机关",
+        "removeReason": "移出原因",
+        "removeDecisionOffice": "移出决定机关",
+        "API_url": "/cmp/risk/operateException/list"
+    },
+    "CmpRiskSeriousviolationList":
+    {
+        "API_description": "严重违法",
+        "addDate": "列入日期",
+        "removeDate": "移出日期",
+        "addReason": "列入严重违法失信企业名单原因",
+        "decisionOffice": "列入决定机构",
+        "removeReason": "移出原因",
+        "removeDecisionOffice": "移出决定机构",
+        "API_url": "/cmp/risk/seriousViolation/list"
+    },
+    "CmpRiskTaxoweList":
+    {
+        "API_description": "欠税公告",
+        "publishDate": "发布日期",
+        "taxpayerNum": "纳税人识别号",
+        "taxCategory": "欠税税种",
+        "amount": "欠税余额（元）",
+        "newAmount": "当亲新发生的欠税（元）",
+        "issuedBy": "税务机关",
+        "API_url": "/cmp/risk/taxOwe/list"
+    },
+    "CmpRiskTaxillegalList":
+    {
+        "API_description": "税收违法",
+        "publishDate": "发布日期",
+        "taxpayerNum": "纳税人识别号",
+        "caseNature": "案件性质",
+        "illegalContent": "违法事实",
+        "taxGov": "税务机关",
+        "API_url": "/cmp/risk/taxIllegal/list"
+    },
+    "CmpRiskEnvpunishmentList":
+    {
+        "API_description": "环保处罚",
+        "publishDate": "处罚日期",
+        "caseNo": "决定文书号",
+        "punishReason": "处罚事由",
+        "punishBasis": "处罚依据",
+        "punishmentResult": "处罚结果",
+        "punishGov": "处罚机关",
+        "implementation": "执行情况",
+        "API_url": "/cmp/risk/envPunishment/list"
+    },
+    "CmpRiskBonddefault":
+    {
+        "API_description": "债券违约",
+        "totalCount":"数据总量",
+        "list":"部分具体数据",
+        "secuAbbr": "债券简称",
+        "secuCode": "债券代码",
+        "bondNatureStr": "债券类型",
+        "firstDefaultDate": "首次违约日期",
+        "defaultTypeStr": "违约类型",
+        "totalDefaultPrice": "违约金额（亿元）",
+        "totalRepaidPrice": "偿还金额（亿元）",
+        "repayRate": "偿还比例",
+        "API_url": "/cmp/risk/bondDefault"
+    },
+    "CmpRiskStocksledgeList":
+    {
+        "API_description": "股权出质",
+        "regDate": "登记日期",
+        "regNo": "登记编号",
+        "czPer": "出质人",
+        "bdPer": "质押标的企业",
+        "zqPer": "质权人",
+        "czAmt": "出质股权数额（万元）",
+        "status": "出质状态",
+        "writeOffDate": "注销时间",
+        "res": "注销原因",
+        "API_url": "/cmp/risk/stockSledge/list"
+    },
+    "CmpRiskMovepledgeList":
+    {
+        "API_description": "动产抵押",
+        "registerDate": "登记日期",
+        "status": "抵押状态",
+        "kind": "被担保债权类型",
+        "amount": "被担保债权数额（万元）",
+        "assuranceScope": "抵押期限",
+        "registOffice": "登记机关",
+        "names": "抵押权人",
+        "API_url": "/cmp/risk/movePledge/list"
+    },
+    "CmpRiskLandmortgageList":
+    {
+        "API_description": "土地抵押",
+        "address": "宗地地址",
+        "landNo": "宗地编号",
+        "mortgagePurpose": "抵押土地用途",
+        "obligeeNo": "土地他项权利人证号",
+        "usufructNo": "土地使用权证号",
+        "acreage": "土地面积（公项）",
+        "mortgageAcreage": "抵押面积（公顷）",
+        "assessmentPrice": "评估金额（万元）",
+        "onBoardStartTime": "抵押起始日期",
+        "onBoardEndTime": "抵押结束日期",
+        "mortgagePrice": "扺押金额（万元）",
+        "mortgagorName": "土地抵押人",
+        "mortgageName": "土地抵押权人",
+        "API_url": "/cmp/risk/landMortgage/list"
+    },
+    "CmpRiskSimplecancellationList":
+    {
+        "API_description": "简易注销",
+        "publicApplyDate": "公告申请日期",
+        "registration": "登记机关",
+        "publicDate": "公告期",
+        "result_content": "简易注销结果",
+        "API_url": "/cmp/risk/simpleCancellation/list"
+    },
+    "CmpRiskLiquidationList":
+    {
+        "API_description": "清算信息",
+        "leader": "清算组负责人",
+        "member": "清算组成员",
+        "API_url": "/cmp/risk/liquidation/list"
+    },
+    "CmpDetailqualificationTechqualification":
+    {
+        "API_description": "科技资质",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "qualificationType": "资质类别",
+        "qualificationName": "资质名称",
+        "identifyYear": "认定年度",
+        "identifyLevel": "认定级别",
+        "identifyUnit": "认定单位",
+        "effectiveDate": "生效日期",
+        "expiryDate": "资质有效期",
+        "productName": "产品名称",
+        "API_url": "/cmp/detailQualification/techQualification"
+    },
+    "CmpDetailqualificationGreenqualification":
+    {
+        "API_description": "绿色资质",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "qualificationType": "资质类别",
+        "qualificationName": "资质名称",
+        "identifyUnit": "认定单位",
+        "productName": "产品名称",
+        "API_url": "/cmp/detailQualification/greenQualification"
+    },
+    "CmpDetailqualificationRankhonor":
+    {
+        "API_description": "荣誉榜单",
+        "category": "榜单类别",
+        "name": "榜单名称",
+        "year": "认定年度",
+        "level": "认定级别",
+        "API_url": "/cmp/detailQualification/rankHonor"
+    },
+    "CmpDetailqualificationNationalstandard":
+    {
+        "API_description": "国家标准",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "standardName": "标准名称",
+        "standardNumber": "标准号",
+        "standardNature": "标准性质",
+        "standardStatus": "标准状态",
+        "draftUnitList": "起草单位",
+        "executeUnit": "执行单位",
+        "API_url": "/cmp/detailQualification/nationalStandard"
+    },
+    "CmpDetailqualificationNationalstandardplan":
+    {
+        "API_description": "国家标准计划",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "standardName": "标准名称",
+        "standardNumber": "标准号",
+        "standardNature": "标准性质",
+        "standardStatus": "标准状态",
+        "draftUnitList": "起草单位",
+        "executeUnit": "执行单位",
+        "API_url": "/cmp/detailQualification/nationalStandardPlan"
+    },
+    "CmpDetailqualificationIndustrystandard":
+    {
+        "API_description": "行业标准",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "standardName": "标准名称",
+        "standardNumber": "标准号",
+        "standardNature": "标准性质",
+        "standardStatus": "标准状态",
+        "draftUnitList": "起草单位",
+        "industry": "所属行业",
+        "approvalDepartment": "批准发布部门",
+        "API_url": "/cmp/detailQualification/industryStandard"
+    },
+    "CmpDetailqualificationLocalstandard":
+    {
+        "API_description": "地方标准",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "standardName": "标准名称",
+        "standardNumber": "标准号",
+        "standardNature": "标准性质",
+        "standardStatus": "标准状态",
+        "draftUnitList": "起草单位",
+        "region": "所属地区",
+        "approvalDepartment": "批准发布部门",
+        "API_url": "/cmp/detailQualification/localStandard"
+    },
+    "CmpDetailqualificationGroupstandard":
+    {
+        "API_description": "团体标准",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "standardName": "标准名称",
+        "standardNumber": "标准号",
+        "standardNature": "标准性质",
+        "standardStatus": "标准状态",
+        "draftUnitList": "起草单位",
+        "nationalIndustry": "国民经济行业分类",
+        "groupName": "团体名称",
+        "API_url": "/cmp/detailQualification/groupStandard"
+    },
+    "CmpDetailqualificationManagementqualification":
+    {
+        "API_description": "管理体系认证",
+        "companyName": "企业名称",
+        "publishDate": "发布日期",
+        "certificateType": "证书类别",
+        "certificateName": "证书名称",
+        "issuingAuthority": "发证机构",
+        "expiryDate": "证书有效期",
+        "certificateStatus": "证书状态",
+        "API_url": "/cmp/detailQualification/managementQualification"
+    },
+    "CompanySearch":
+    {
+        "API_description": "企业高级搜索",
+        "address": "经营地址",
+        "email": "邮箱",
+        "ent_value": "企业综合价值评分",
+        "apprdate": "核准日期",
+        "candate": "注销日期",
+        "companyName": "企业名称",
+        "employee_count": "职工人数",
+        "endo_ins_num": "养老保险参保人数",
+        "entname": "企业名称",
+        "entstatus_name": "企业状态中文字段",
+        "enttype_name": "企业类型中文字段",
+        "esdate": "成立日期",
+        "ext_tag": "特色企业补充字段",
+        "industryco_name": "行业代码中文字段",
+        "industryphy_name": "行业门类中文字段",
+        "legal_person": "法人名称",
+        "model": "企业规模",
+        "opfrom": "经营期限自",
+        "opscope": "经营（业务）范围",
+        "opto": "经营期限至",
+        "regCapital": "注册资本(带单位)",
+        "regcap": "注册资本码值为：万元",
+        "regcapcur_name": "注册资本币种中文字段",
+        "registCapiUnit": "注册资本单位",
+        "registCapiValue": "注册资本",
+        "regorg_city": "市",
+        "regorg_county": "县",
+        "regorg_name": "登记机关中文",
+        "regorg_province": "省",
+        "revdate": "吊销日期",
+        "rz_pe_ipo": "上市进程",
+        "rz_pe_round": "融资轮次",
+        "selected_cls_codes": "精选产业分类字段",
+        "startDate": "成立日期",
+        "product_info": "产品信息",
+        "company_profile": "企业简介",
+        "API_url": "/idis_industry/teis/company/search/go"
+    },
+    "CompanySearch-product_info":
+    {
+        "brief": "产品概述",
+        "website": "网站",
+        "intro": "产品介绍",
+        "status": "运营中"
+    },
+    "CompanySearch-tags":
+    {
+        "aggName": "标签名称",
+        "detail": "标签详情"
+    },
+    "主营构成-按项目名称展示":
+    {
+        "API_url": "/cmp/aiplugin/project"
+    },
+    "主营构成-按行业分类":
+    {
+        "API_url": "/cmp/aiplugin/industry"
+    },
+    "主营构成-按产品(项目)分类":
+    {
+        "API_url": "/cmp/aiplugin/product"
+    },
+    "主营构成-按地区分类":
+    {
+        "API_url": "/cmp/aiplugin/area"
+    },
+    "IndustryPatent":
+    {
+        "API_description": "专利信息列表",
+        "companyName": "申请人",
+        "name": "专利名称",
+        "applicationDate": "申请日期",
+        "publicationDate": "公告日期",
+        "expirationDate": "失效日期",
+        "valueScore": "评分：专利价值度",
+        "stabilityScore": "评分：技术稳定度",
+        "advancedScore": "评分：技术先进性",
+        "protectionScore": "评分：保护范围",
+        "inventor": "发明人",
+        "publicationNumber": "公开号",
+        "applicant": "申请人",
+        "tagList": "专利标签",
+        "type": "专利类型",
+        "legalStatus": "法律状态",
+        "applicationNumber": "申请编号",
+        "API_url": "/idis_industry/teis/industryZs/detail/industryCreative/patent/find"
+    },
+    "IndustrySoftwareCopyright":
+    {
+        "API_description": "软件著作权列表",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "fullName": "软件全称",
+        "shortName": "软件简称",
+        "version": "版本号",
+        "registerNo": "登记号码",
+        "publishDate": "发布日期",
+        "API_url": "/cmp/industryDetail/intellectual/softwareCopyright/find"
+    },
+    "IndustryDetailSoftwareCopyright":
+    {
+        "API_description": "作品著作权列表",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "name": "作品名称",
+        "category": "登记类别",
+        "registerNo": "登记号码",
+        "finishDate": "作品完成日期",
+        "publishDate": "发布日期",
+        "API_url": "/cmp/industryDetail/intellectual/copyright/find"
+    },
+    "IndustryTrademark":
+    {
+        "API_description": "商标信息列表",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "applyDate": "申请日期",
+        "imageUrl": "商标图片",
+        "name": "商标名称",
+        "registerNo": "登记号码",
+        "category": "国际分类",
+        "categoryDescription": "分类描述",
+        "status": "是否有效",
+        "flowStatus": "商标状态流程",
+        "API_url": "/cmp/industryDetail/intellectual/trademark/find"
+    },
+    "IndustryResearchReport":
+    {
+        "API_description": "研报列表",
+        "title": "标题",
+        "summary": "摘要",
+        "orgName": "研究机构",
+        "analystList": "分析师列表",
+        "pdfUrl": "研报链接",
+        "pageCount": "页数",
+        "publishDate": "发布日期",
+        "API_url": "/idis_industry/teis/industryZs/detail/researchReport/findPage"
+    },
+    "IndustryResearchReport-analystList":
+    {
+        "analystName": "分析师名"
+    }
+}

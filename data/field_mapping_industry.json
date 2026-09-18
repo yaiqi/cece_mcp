@@ -1,0 +1,863 @@
+{
+    "industryRegionDistribution":
+    {
+        "description": "目标产业在目标区域下，各产业节点在不同子区域的分布情况",
+        "API_description": "产业节点区域分布",
+        "industryItemList": "产业节点分布",
+        "industryName": "产业节点名称",
+        "regionItemList": "区域分布",
+        "regionName": "区域名称",
+        "companyCount": "企业数量",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryRegionDistribution"
+    },
+    "pieChartBundle":
+    {
+        "description": "目标产业在目标区域下，不同企业性质（国有、外资、其他、民营）、不同企业经营年限、不同企业注册资本的企业数量占比情况",
+        "API_description": "企业基本信息统计",
+        "regionName": "地区名称",
+        "natureItemList": "企业性质",
+        "name": "条目名称",
+        "companyCount": "企业数量",
+        "ratio": "数量占比",
+        "ageItemList": "企业经营年限",
+        "capitalItemList": "企业注册资本",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/pieChartBundle"
+    },
+    "typeDistribution":
+    {
+        "description": "目标产业在目标区域下，各类资质类型下企业数量的分布情况",
+        "API_description": "资质类型分布",
+        "itemList": "企业类型",
+        "typeName": "类型名称",
+        "companyCount": "企业数量",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/typeDistribution"
+    },
+    "regionDistribution":
+    {
+        "description": "目标产业在目标区域下，各子区域的企业数量、产业评分及集中度的分布情况",
+        "API_description": "企业区域分布",
+        "itemList": "企业区域分布",
+        "regionName": "区域名称",
+        "companyCount": "企业数",
+        "concentrationRate": "集中度",
+        "compositeScore": "评分",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/regionDistribution"
+    },
+    "industryDistribution":
+    {
+        "description": "目标产业在目标区域下，产业链各节点的企业数量分布情况",
+        "API_description": "产业节点分布",
+        "itemList": "产业节点分布",
+        "industryName": "产业节点名称",
+        "companyCount": "企业数量",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/industryDistribution"
+    },
+    "scaleChartBundle":
+    {
+        "description": "目标产业在目标区域下，不同规模（微型、小型、中型、大型）新增企业和存量企业数量随时间的变化趋势",
+        "API_description": "企业规模趋势",
+        "stockItemList": "规模趋势",
+        "time": "时间",
+        "scaleItemList": "企业规模",
+        "scale": "企业规模",
+        "companyCount": "企业数量",
+        "API_url": "/idis_industry/teis/industryZs/detail/companyPortrait/scaleChartBundle"
+    },
+    "patentStat":
+    {
+        "description": "目标产业在目标区域下，不同专利类型（发明申请、实用新型、外观设计、发明授权）企业专利数量随年份的变化趋势",
+        "API_description": "企业创新活力统计",
+        "year": "年份",
+        "items": "创新数据",
+        "key": "专利类型",
+        "val": "数量",
+        "API_url": "/idis_industry/teis/patent/stat"
+    },
+    "ipoCompanyGrowthAbilityTrend-TotalOperatingRevenue":
+    {
+        "description": "目标产业在目标区域下，上市企业的营业总收入随时间（单季度或全年）的变化趋势",
+        "API_description": "产业财务趋势-成长能力-营业总收入",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "营业总收入信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend"
+    },
+    "ipoCompanyGrowthAbilityTrend-TotalAssets":
+    {
+        "description": "目标产业在目标区域下，上市企业的总资产随时间（单季度或全年）的变化趋势",
+        "API_description": "产业财务趋势-成长能力-总资产",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "总资产信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend"
+    },
+    "ipoCompanyGrowthAbilityTrend-EarningsPerShare":
+    {
+        "description": "目标产业在目标区域下，上市企业的每股收益随时间（单季度或全年）的变化趋势",
+        "API_description": "产业财务趋势-成长能力-每股收益",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "每股收益信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTrend"
+    },
+    "ipoCompanyProfitAbilityTrend-ProfitMargin":
+    {
+        "description": "目标产业在目标区域下，上市企业的利润率相关的指标平均销售毛利率、平均销售净利率，随时间（单季度或全年）的变化趋势，分析企业盈利水平的时间演变",
+        "API_description": "产业财务趋势-盈利能力-利润率",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "利润率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTrend"
+    },
+    "ipoCompanyProfitAbilityTrend-ROE/ROA":
+    {
+        "description": "目标产业在目标区域下，ROE/ROA相关的指标净资产收益率_摊薄、总资产净利率随时间（单季度或全年）的变化趋势，分析企业盈利水平的时间演变",
+        "API_description": "产业财务趋势-盈利能力-ROE/ROA",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "ROE/ROA信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTrend"
+    },
+    "ipoCompanyOperationAbilityTrend-OperatingCycle":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均营业周期、平均营业周期同比随时间（单季度或全年）的变化趋势，直观呈现运营能力相关财务数据的动态变化",
+        "API_description": "产业财务趋势-运营能力-营业周期",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "营业周期信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend"
+    },
+    "ipoCompanyOperationAbilityTrend-TotalAssetsTurnover":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均总资产周转率、平均总资产周转率同比随时间（单季度或全年）的变化趋势，直观呈现运营能力相关财务数据的动态变化",
+        "API_description": "产业财务趋势-运营能力-总资产周转率",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "资产周转率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend"
+    },
+    "ipoCompanyOperationAbilityTrend-InventoryTurnover":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均存货周转率、平均存货周转率同比随时间（单季度或全年）的变化趋势，直观呈现运营能力相关财务数据的动态变化",
+        "API_description": "产业财务趋势-运营能力-存货周转率",
+        "totalCount": "数据总量",
+        "list": "部分数据信息",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "存货周转率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTrend"
+    },
+    "ipoCompanyDebtAbilityTrend-DebtToAssetsRatio":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均资产负债率、平均资产负债率同比随时间（单季度或全年）的趋势，反映企业负债与资产的关系及变化",
+        "API_description": "产业财务趋势-偿债能力-资产负债率",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "资产负债率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend"
+    },
+    "ipoCompanyDebtAbilityTrend-CurrentRatio":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均流动比率、平均流动比率同比随时间（单季度或全年）的趋势，反映企业负债与资产的关系及变化",
+        "API_description": "产业财务趋势-偿债能力-流动比率",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "流动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend"
+    },
+    "ipoCompanyDebtAbilityTrend-QuickRatio":
+    {
+        "description": "目标产业在目标区域下，上市企业的平均速动比率、平均速动比率同比随时间（单季度或全年）的趋势，反映企业负债与资产的关系及变化",
+        "API_description": "产业财务趋势-偿债能力-速动比率",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "quarter": "季度",
+        "indicatorItemList": "速动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTrend"
+    },
+    "ipoCompanyGrowthAbility":
+    {
+        "description": "目标产业在目标区域下，企业的营业收入、总资产、利润总额、每股收益等成长能力相关财务数据的明细，按企业名称逐一展示，便于查看各企业的成长财务指标",
+        "API_description": "企业财务明细-成长能力",
+        "totalCount": "查询企业总数",
+        "list": "数据",
+        "companyName": "企业名称",
+        "operatingRevenue": "营业收入（亿元）",
+        "operatingRevenueYOY": "营业收入同步（%）",
+        "totalAssets": "总资产（亿元）",
+        "totalAssetGrowRate": "总资产同比（%）",
+        "operatingProfit": "利润总额（亿元）",
+        "operProfitGrowRate": "利润总额同比（%）",
+        "eps": "每股收益-基本（元）",
+        "epsYOY": "每股收益-基本同比（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbility"
+    },
+    "ipoCompanyProfitAbility":
+    {
+        "description": "目标产业在目标区域下，企业的毛利率、净利率、净资产收益率等盈利能力相关财务数据的明细，方便对比分析不同企业的盈利水平",
+        "API_description": "企业财务明细-盈利能力",
+        "totalCount": "查询企业总数",
+        "list": "数据",
+        "companyName": "企业名称",
+        "grossIncomeRatio": "毛利率（%）",
+        "netProfitRatio": "净利率（%）",
+        "roeWeighted": "净资产收益率-加权（%）",
+        "roe": "净资产收益率-摊薄（%）",
+        "roaEBIT": "总资产报酬率（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbility"
+    },
+    "ipoCompanyOperationAbility":
+    {
+        "description": "目标产业在目标区域下，企业的营业周期、总资产周转率、存货周转率等运营能力相关财务数据的明细，方便分析各企业的运营效率指标。",
+        "API_description": "企业财务明细-运营能力",
+        "totalCount": "查询企业总数",
+        "list": "数据",
+        "companyName": "企业名称",
+        "operCycle": "营业周期（天/次）",
+        "totalAssetTRate": "总资产周转率（次）",
+        "inventoryTRate": "存货周转率（次）",
+        "artRate": "应收账款周转率（次）",
+        "fixedAssetTRate": "固定资产周转率（次）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbility"
+    },
+    "ipoCompanyDebtAbility":
+    {
+        "description": "目标产业在目标区域下，企业的资产负债率、流动比率、速动比率、产权比率、现金比率等偿债能力相关财务数据的明细，辅助评估企业的偿债能力和财务风险",
+        "API_description": "企业财务明细-偿债能力",
+        "totalCount": "查询企业总数",
+        "list": "数据",
+        "companyName": "企业名称",
+        "debtAssetsRatio": "资产负债率（%）",
+        "currentLiabilityToTL": "流动负债/负债合计（%）",
+        "debtEquityRatio": "产权比率（%）",
+        "currentRatio": "流动比率（%）",
+        "quickRatio": "速动比率（%）",
+        "cashRatio": "现金比率（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbility"
+    },
+    "ipoCompanyCashFlow":
+    {
+        "description": "目标产业在目标区域下，企业的销售现金比率、经营活动现金流量等现金流量相关财务数据的明细，反映企业的现金获取与运用能力",
+        "API_description": "企业财务明细-现金流量",
+        "totalCount": "查询企业总数",
+        "list": "数据",
+        "companyName": "企业名称",
+        "cashRateOfSales": "销售现金比率（%）",
+        "saleServiceCashToOR": "销售商品提供劳务收到的现金/营业收入（%）",
+        "netOperCFToOperProfTTM": "经营活动产生的现金流量/营业利润（%）",
+        "netOperateCashFlowYOY": "经营活动产生的现金流量净额同比增长（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlow"
+    },
+    "ipoCompanyGrowthAbilityTop":
+    {
+        "description": "目标产业在目标区域下，企业按营业收入从高到低排名",
+        "API_description": "企业排行-营业总收入",
+        "companyName": "企业名称",
+        "operatingRevenue": "营业收入（亿元）",
+        "operatingRevenueYOY": "营业收入同步（%）",
+        "totalAssets": "总资产（亿元）",
+        "totalAssetGrowRate": "总资产同比（%）",
+        "operatingProfit": "利润总额（亿元）",
+        "operProfitGrowRate": "利润总额同比（%）",
+        "eps": "每股收益-基本（元）",
+        "epsYOY": "每股收益-基本同比（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyGrowthAbilityTop"
+    },
+    "ipoCompanyProfitAbilityTop":
+    {
+        "description": "目标产业在目标区域下，企业按毛利率从高到低排名",
+        "API_description": "企业排行-毛利率",
+        "companyName": "企业名称",
+        "grossIncomeRatio": "毛利率（%）",
+        "netProfitRatio": "净利率（%）",
+        "roeWeighted": "净资产收益率-加权（%）",
+        "roe": "净资产收益率-摊薄（%）",
+        "roaEBIT": "总资产报酬率（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyProfitAbilityTop"
+    },
+    "ipoCompanyOperationAbilityTop":
+    {
+        "description": "目标产业在目标区域下，企业按营业周期从高到低排名",
+        "API_description": "企业排行-营业周期",
+        "companyName": "企业名称",
+        "operCycle": "营业周期（天/次）",
+        "totalAssetTRate": "总资产周转率（次）",
+        "inventoryTRate": "存货周转率（次）",
+        "artRate": "应收账款周转率（次）",
+        "fixedAssetTRate": "固定资产周转率（次）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyOperationAbilityTop"
+    },
+    "ipoCompanyDebtAbilityTop":
+    {
+        "description": "目标产业在目标区域下，企业按资产负债率从高到低排名",
+        "API_description": "企业排行-资产负债率",
+        "companyName": "企业名称",
+        "debtAssetsRatio": "资产负债率（%）",
+        "currentLiabilityToTL": "流动负债/负债合计（%）",
+        "debtEquityRatio": "产权比率（%）",
+        "currentRatio": "流动比率（%）",
+        "quickRatio": "速动比率（%）",
+        "cashRatio": "现金比率（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyDebtAbilityTop"
+    },
+    "ipoCompanyCashFlowTop":
+    {
+        "description": "目标产业在目标区域下，企业按销售现金比率从高到低排名",
+        "API_description": "企业排行-销售现金比率",
+        "companyName": "企业名称",
+        "cashRateOfSales": "销售现金比率（%）",
+        "saleServiceCashToOR": "销售商品提供劳务收到的现金/营业收入（%）",
+        "netOperCFToOperProfTTM": "经营活动产生的现金流量/营业利润（%）",
+        "netOperateCashFlowYOY": "经营活动产生的现金流量净额同比增长（%）",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/ipoCompanyCashFlowTop"
+    },
+    "allCompanyOperationTrend":
+    {
+        "description": "目标产业在目标区域下，全部企业的总营收水平指数和平均营收水平指数随时间的变化趋势",
+        "API_description": "产业财务趋势-全部企业-营收水平指数",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "indicatorItemList": "流动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyOperationTrend"
+    },
+    "allCompanyAssetTrend":
+    {
+        "description": "目标产业在目标区域下，全部企业的总资产水平指数和平均资产水平指数随时间的变化趋势，体现产业资产的整体和平均规模发展态势",
+        "API_description": "产业财务趋势-全部企业-资产规模指数",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "indicatorItemList": "流动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyAssetTrend"
+    },
+    "allCompanyProfitTrend":
+    {
+        "description": "目标产业在目标区域下，全部企业的总利润水平指数和平均利润水平指数随时间的变化趋势。",
+        "API_description": "产业财务趋势-全部企业-销售利润水平",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "indicatorItemList": "流动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyProfitTrend"
+    },
+    "allCompanyEquityTrend":
+    {
+        "description": "目标产业在目标区域下，全部企业的平均资产负债水平指数和平均所有者者权益回报率水平指数随时间的变化趋势，展示所有者权益相关财务指标的波动情况。",
+        "API_description": "产业财务趋势-全部企业-所有者权益水平指数",
+        "timeItemList": "时间条目",
+        "year": "年份",
+        "indicatorItemList": "流动比率信息",
+        "indicator": "指标名称",
+        "value": "指标值",
+        "API_url": "/idis_industry/teis/industryZs/detail/financialAnalyze/allCompanyEquityTrend"
+    },
+    "patentStat-Trend":
+    {
+        "description": "目标产业在目标区域下，专利数量随时间的变化趋势，按有效、失效、审中状态分类呈现",
+        "API_description": "专利信息-专利趋势",
+        "year": "年份",
+        "items": "该年数据",
+        "key": "专利状态",
+        "val": "数量",
+        "API_url": "/idis_industry/teis/patent/stat"
+    },
+    "patentStat-TypeDistribution":
+    {
+        "description": "目标产业在目标区域下，产业专利按类型（发明申请、发明授权、外观设计、实用新型）的分布情况",
+        "API_description": "专利信息-类型分布",
+        "year": "年份",
+        "items": "该年数据",
+        "key": "专利类型",
+        "val": "数量",
+        "API_url": "/idis_industry/teis/patent/stat"
+    },
+    "patentStat-KeyTechnology":
+    {
+        "description": "目标产业在目标区域下，产业专利相关关键技术的词云展示，突出显示技术热点和重点方向",
+        "API_description": "专利信息-关键技术",
+        "year": "年份",
+        "items": "该年数据",
+        "key": "关键字",
+        "val": "权重",
+        "API_url": "/idis_industry/teis/patent/stat"
+    },
+    "evaluateResult":
+    {
+        "description": "目标产业在目标区域下，产业的综合评分、评分排名，以及在创新能力、融资能力、成长能力上产业竞争力的表现",
+        "API_description": "产业综合评估",
+        "data": "数据信息",
+        "industryName": "产业名称",
+        "regionName": "地区名称",
+        "areaName": "所属地域名称",
+        "provinceName": "所属省名称",
+        "year": "评估年份",
+        "strengthCategoryList": "该地区该产业的优势",
+        "weaknessCategoryList": "该地区该产业的短板",
+        "itemList": "评估信息",
+        "categoryName": "评估维度",
+        "categoryGrade": "产业评级",
+        "categoryScore": "产业得分",
+        "categoryRankInNation": "该产业下该地区的全国排名",
+        "categoryRankInNationTotal": "该产业下地区的全国总数",
+        "categoryRankInArea": "该产业下，地区所在地域的排名",
+        "categoryRankInAreaTotal": "该产业下，地区所在地域的地区总数",
+        "categoryRankInProvince": "该产业下，地区所在省份的排名",
+        "categoryRankInProvinceTotal": "该产业下，地区所在省份的地区总数",
+        "API_url": "/idis_industry/teis/industryZs/detail/score/evaluateResult"
+    },
+    "indicatorAnalysis":
+    {
+        "description": "目标产业在目标区域下，产业的各项指标（如产业参保人数、龙头企业数量等）进行分析优势指标和劣势指标的具体数值和评级",
+        "API_description": "产业优劣势指标",
+        "data": "数据信息",
+        "strengthItemList": "优势指标",
+        "weaknessItemList": "劣势指标",
+        "indicatorName": "指标名称",
+        "indicatorScore": "指标得分",
+        "indicatorCategory": "指标能力",
+        "indicatorValue": "指标值",
+        "indicatorGrade": "指标评级",
+        "API_url": "/idis_industry/teis/industryZs/detail/score/indicatorAnalysis"
+    },
+    "regionContrast-nation":
+    {
+        "description": "目标产业在目标区域及其在全国范围内同级别其他区域的整体评分及排名情况。输入参数为目标区域和目标产业。返回参数包含：区域名称、目标产业节点、区域目标产业综合评分等级（最高A最低E）、区域目标产业综合评分、区域目标产业综合评分排名，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力。",
+        "API_description": "产业详情评分-本地区在全国范围内对比",
+        "itemList": "对比地区数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "区域产业综合评级",
+        "industryScore": "区域产业综合评分",
+        "industryRankInNation": "区域产业综合评分排名_分子",
+        "industryRankInNationTotal": "区域产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/regionContrast"
+    },
+    "regionContrast-province":
+    {
+        "description": "目标产业在目标区域及其在相同省份内同级别其他区域的整体评分及排名情况。输入参数为目标区域和目标产业。返回参数包含：区域名称、目标产业节点、区域目标产业综合评分等级（最高A最低E）、区域目标产业综合评分、区域目标产业综合评分排名，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力。",
+        "API_description": "产业详情评分-本地区在本省范围内对比",
+        "itemList": "对比地区数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "区域产业综合评级",
+        "industryScore": "区域产业综合评分",
+        "industryRankInNation": "区域产业综合评分排名_分子",
+        "industryRankInNationTotal": "区域产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/regionContrast"
+    },
+    "regionContrast-city":
+    {
+        "description": "目标产业在目标区域及其在相同城市内同级别其他区域的整体评分及排名情况。输入参数为目标区域和目标产业。返回参数包含：区域名称、目标产业节点、区域目标产业综合评分等级（最高A最低E）、区域目标产业综合评分、区域目标产业综合评分排名，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力。",
+        "API_description": "产业详情评分-本地区在本市范围内对比",
+        "itemList": "对比地区数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "区域产业综合评级",
+        "industryScore": "区域产业综合评分",
+        "industryRankInNation": "区域产业综合评分排名_分子",
+        "industryRankInNationTotal": "区域产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/regionContrast"
+    },
+    "industryContrast-tree":
+    {
+        "description": "目标区域内指定产业链整链上所有产业节点的评分与排名列表。入参为包括目标区域和产业链。出参包含每个产业节点名称、产业节点综合评分等级（最高A最低E）、产业节点综合评分、产业节点综合评分的全国排，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力",
+        "API_description": "产业详情评分-全产业链节点",
+        "itemList": "对比节点数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "产业综合评级",
+        "industryScore": "产业综合评分",
+        "industryRankInNation": "产业综合评分排名_分子",
+        "industryRankInNationTotal": "产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/industryContrast"
+    },
+    "industryContrast-siblings":
+    {
+        "description": "目标区域内，与指定产业节点属于同一产业链且层级相同的所有产业节点的评分与排名列表。入参为包括目标区域和目标产业节点。出参包含每个产业节点名称、产业节点综合评分等级（最高A最低E）、产业节点综合评分、产业节点综合评分的全国排，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力",
+        "API_description": "产业详情评分-同级节点",
+        "itemList": "对比节点数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "产业综合评级",
+        "industryScore": "产业综合评分",
+        "industryRankInNation": "产业综合评分排名_分子",
+        "industryRankInNationTotal": "产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/industryContrast"
+    },
+    "industryContrast-descendants":
+    {
+        "description": "目标区域内，属于指定产业节点下方所有层级的所有产业节点的评分与排名列表。入参为包括目标区域和目标产业节点。出参包含每个产业节点名称、产业节点综合评分等级（最高A最低E）、产业节点综合评分、产业节点综合评分的全国排，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力",
+        "API_description": "产业详情评分-所有下级节点",
+        "itemList": "对比节点数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "产业综合评级",
+        "industryScore": "产业综合评分",
+        "industryRankInNation": "产业综合评分排名_分子",
+        "industryRankInNationTotal": "产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/industryContrast"
+    },
+    "industryContrast-children":
+    {
+        "description": "目标区域内，属于指定产业节点下一层级的产业节点的评分与排名列表。入参为包括目标区域和目标产业节点。出参包含每个产业节点名称、产业节点综合评分等级（最高A最低E）、产业节点综合评分、产业节点综合评分的全国排，以及详细的评分子项：产业规模、优质企业、创新能力、融资能力、产业效益、成长能力",
+        "API_description": "产业详情评分-下一层级节点",
+        "itemList": "对比节点数据",
+        "regionFullName": "区域全称",
+        "industryName": "产业节点名称",
+        "industryGrade": "产业综合评级",
+        "industryScore": "产业综合评分",
+        "industryRankInNation": "产业综合评分排名_分子",
+        "industryRankInNationTotal": "产业综合评分排名_分母",
+        "scoreScale": "评分子项_产业规模",
+        "scoreLeading": "评分子项_优质企业",
+        "scoreInnovation": "评分子项_创新能力",
+        "scoreFinance": "评分子项_融资能力",
+        "scoreProfit": "评分子项_产业效益",
+        "scoreGrowth": "评分子项_成长能力",
+        "API_url": "/idis_industry/teis//industryZs/detail/score/industryContrast"
+    },
+    "businessFinanceTrend":
+    {
+        "description": "目标产业在目标区域下，的融资金额和融资事件数随时间的变化趋势，呈现融资规模与事件数量的年度变化",
+        "API_description": "融资总览-融资金额趋势",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资金额",
+        "num": "融资事件数（次）",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "regionFinance":
+    {
+        "description": "目标产业在目标区域下，各子区域的融资事件次数、融资金额分布，展示不同区域的融资活跃度",
+        "API_description": "融资总览-融资地区分布",
+        "num": "融资事件数（次）",
+        "detail": "该地区下融资总览",
+        "province": "省",
+        "city": "市",
+        "county": "区",
+        "amount": "融资金额（万元）",
+        "API_url": "/idis_industry/teis/v2/businessFinance/region/finance"
+    },
+    "amountFinance":
+    {
+        "description": "目标产业在目标区域下，融资事件在不同金额区间（如 100 万以下、100-1000 万等）的分布情况，展示各金额段的融资次数",
+        "API_description": "融资总览-融资金额分布",
+        "amountTypeStr": "融资金额",
+        "num": "融资事件数（次）",
+        "API_url": "/idis_industry/teis/v2/businessFinance/amount/finance"
+    },
+    "typeFinance":
+    {
+        "description": "目标产业在目标区域下，融资事件按融资类型（如应收账款、创投融资等）的占比情况，展示各融资类型的事件数比例",
+        "API_description": "融资总览-融资类型分布",
+        "total": "融资事件总数（次）",
+        "data": "融资类型",
+        "type1": "融资类型",
+        "num": "融资事件数（次）",
+        "rate": "融资事件占比（%）",
+        "API_url": "/idis_industry/teis/v2/businessFinance/type/finance"
+    },
+    "businessFinanceTrend-type1":
+    {
+        "description": "目标产业在目标区域下，创投融资各轮次的融资金额和事件数随时间的变化趋势，呈现各融资类型的年度变化",
+        "API_description": "融资类型分析-创投融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type2":
+    {
+        "description": "目标产业在目标区域下，各市场股票融资（A股、港股、新三板）的融资金额和事件数随时间的变化趋势，呈现各融资类型的年度变化",
+        "API_description": "融资类型分析-股票融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type3":
+    {
+        "description": "目标产业在目标区域下,债券融资的融资金额和事件数随时间的变化趋势",
+        "API_description": "融资类型分析-债券融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type4":
+    {
+        "description": "目标产业在目标区域下,应收账款的融资金额和事件数随时间的变化趋势",
+        "API_description": "融资类型分析-应收账款",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type5":
+    {
+        "description": "目标产业在目标区域下,租赁融资的融资金额和事件数随时间的变化趋势",
+        "API_description": "融资类型分析-租赁融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type6":
+    {
+        "description": "目标产业在目标区域下,信托融资的融资金额和事件数随时间的变化趋势",
+        "API_description": "融资类型分析-信托融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type7":
+    {
+        "description": "目标产业在目标区域下,银行借款的融资金额和事件数随时间的变化趋势",
+        "API_description": "融资类型分析-银行借款",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "businessFinanceTrend-type8":
+    {
+        "description": "目标产业在目标区域下,(保理融资、委托贷款)等其他类型融资的融资金额和事件数随时间的变化趋势，呈现各融资类型的年度变化",
+        "API_description": "融资类型分析-其他融资",
+        "priceUnit": "融资金额单位",
+        "year": "年份",
+        "amount": "融资额",
+        "num": "融资事件次数",
+        "detail": "当年融资详情",
+        "type": "融资类型",
+        "API_url": "/idis_industry/teis/v2/businessFinance/trend"
+    },
+    "IndustryPatent":
+    {
+        "API_description": "专利信息列表",
+        "totalCount": "专利总数",
+        "list": "部分专利信息",
+        "companyName": "申请人",
+        "name": "专利名称",
+        "applicationDate": "申请日期",
+        "publicationDate": "公告日期",
+        "expirationDate": "失效日期",
+        "valueScore": "评分：专利价值度",
+        "stabilityScore": "评分：技术稳定度",
+        "advancedScore": "评分：技术先进性",
+        "protectionScore": "评分：保护范围",
+        "inventor": "发明人",
+        "publicationNumber": "公开号",
+        "applicant": "申请人",
+        "tagList": "专利标签",
+        "type": "专利类型",
+        "legalStatus": "法律状态",
+        "applicationNumber": "申请编号",
+        "API_url": "/idis_industry/teis/industryZs/detail/industryCreative/patent/find"
+    },
+    "IndustrySoftwareCopyright":
+    {
+        "API_description": "软件著作权列表",
+        "totalCount": "软件著作权总数",
+        "list": "部分软件著作权信息",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "fullName": "软件全称",
+        "shortName": "软件简称",
+        "version": "版本号",
+        "registerNo": "登记号码",
+        "publishDate": "发布日期",
+        "API_url": "/cmp/industryDetail/intellectual/softwareCopyright/find"
+    },
+    "IndustryDetailSoftwareCopyright":
+    {
+        "API_description": "作品著作权列表",
+        "totalCount": "作品著作权总数",
+        "list": "部分作品著作权信息",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "name": "作品名称",
+        "category": "登记类别",
+        "registerNo": "登记号码",
+        "finishDate": "作品完成日期",
+        "publishDate": "发布日期",
+        "API_url": "/cmp/industryDetail/intellectual/copyright/find"
+    },
+    "IndustryTrademark":
+    {
+        "API_description": "商标信息列表",
+        "totalCount": "商标总数",
+        "list": "部分商标信息",
+        "companyName": "申请人",
+        "registerDate": "登记日期",
+        "applyDate": "申请日期",
+        "imageUrl": "商标图片",
+        "name": "商标名称",
+        "registerNo": "登记号码",
+        "category": "国际分类",
+        "categoryDescription": "分类描述",
+        "status": "是否有效",
+        "flowStatus": "商标状态流程",
+        "API_url": "/cmp/industryDetail/intellectual/trademark/find"
+    },
+    "IndustryResearchReport":
+    {
+        "API_description": "研报列表",
+        "totalCount": "研报总数",
+        "list": "部分研报信息",
+        "title": "标题",
+        "summary": "摘要",
+        "orgName": "研究机构",
+        "analystList": "分析师列表",
+        "analystName": "分析师名",
+        "pdfUrl": "研报链接",
+        "pageCount": "页数",
+        "publishDate": "发布日期",
+        "API_url": "/idis_industry/teis/industryZs/detail/researchReport/findPage"
+    },
+    "CompanySearch":
+    {
+        "API_description": "企业高级搜索",
+        "totalCount": "搜索数据总量",
+        "list": "部分数据详情",
+        "companyName": "企业名称",
+        "basicInfo":"企业基本信息",
+        "companyAddress": "经营地址",
+        "registeredAddress": "注册地址",
+        "legalPersonList":"法人列表",
+        "legalPersonName": "姓名",
+        "registeredCapital": "注册资本",
+        "companyScale": "企业规模",
+        "establishmentDate": "成立日期",
+        "companyType": "企业类型中文字段",
+        "companyStatus": "企业状态中文字段",
+        "emailList": "邮箱列表",
+        "contactPhoneList": "联系电话列表",
+        "website":"企业官网",
+        "regionInfo":"地址信息",
+        "provinceName": "省",
+        "cityName": "市",
+        "regionName": "县",
+        "scoreInfo": "企业评分",
+        "API_url": "/idis_industry/teis/landing/company/pro/advanceSearch"
+    },
+    "CompanySearch-scoreInfo":{
+        "valueScore": "综合评分",
+        "innovationScore": "科创评分"
+    },
+    "CompanySearch-scoreInfo-valueScore":{
+        "scoreValue": "得分",
+        "scoreGrade": "评级"
+    },
+    "CompanySearch-scoreInfo-innovationScore":{
+        "scoreValue": "得分",
+        "scoreGrade": "评级"
+    }
+}
